@@ -42,6 +42,21 @@
       align-items: center;
       margin: 16px 0;
     }
+    .doc-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 8px 0 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .doc-nav a {
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+    }
     select { padding: 6px 10px; font-size: 14px; }
     .note {
       border-left: 4px solid var(--line);
@@ -64,6 +79,11 @@
       <div><strong>Effective Date:</strong> February 20, 2026</div>
       <div><strong>Data Controller / 数据控制者:</strong> LinguaAI Developer</div>
       <div><strong>Privacy Contact / 隐私联系邮箱:</strong> cdlcdl9527@gmail.com</div>
+    </div>
+
+    <div class="doc-nav" aria-label="Document Links">
+      <a href="./index.html"><strong>Privacy Policy</strong></a>
+      <a href="./terms.html">Terms of Service</a>
     </div>
 
     <div class="toolbar" aria-label="Language Switcher">
