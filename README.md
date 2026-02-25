@@ -1,9 +1,9 @@
-﻿# LinguaAI Privacy Policy Repository
+# KopiAI Privacy Policy Repository
 
-This repository publishes the public legal pages used by the LinguaAI app:
+This repository publishes the public legal pages used by the KopiAI app:
 
-- Privacy Policy URL: https://aabbcdl.github.io/linguaai-app-privacy/
-- Terms of Service URL: https://aabbcdl.github.io/linguaai-app-privacy/terms.html
+- Privacy Policy URL: https://aabbcdl.github.io/kopiai-app-privacy/
+- Terms of Service URL: https://aabbcdl.github.io/kopiai-app-privacy/terms.html
 - Source files: `index.html` (privacy), `terms.html` (terms)
 
 ## Language Switch
