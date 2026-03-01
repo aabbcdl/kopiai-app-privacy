@@ -94,6 +94,7 @@
         <option value="th">ไทย</option>
         <option value="vi">Tiếng Việt</option>
         <option value="ms">Bahasa Melayu</option>
+        <option value="tl">Tagalog</option>
       </select>
     </div>
 
@@ -385,6 +386,10 @@
       const sections = document.querySelectorAll(".lang-section");
 
       function setLang(lang) {
+        if (lang === "tl") {
+          window.location.href = "terms-tl.html";
+          return;
+        }
         sections.forEach((el) => {
           const matched = el.getAttribute("data-lang") === lang;
           if (matched) {
@@ -407,8 +412,10 @@
         }
       })();
 
-      const supported = new Set(["en", "zh", "id", "th", "vi", "ms"]);
+      const supported = new Set(["en", "zh", "id", "th", "vi", "ms", "tl"]);
       const langMap = [
+        ["fil", "tl"],
+        ["tl", "tl"],
         ["zh", "zh"],
         ["id", "id"],
         ["th", "th"],
