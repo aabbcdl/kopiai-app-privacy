@@ -20,151 +20,114 @@
       color: var(--text);
       font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     }
-    .wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
-    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
     h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.2; }
     h2 { margin: 28px 0 8px; font-size: 24px; line-height: 1.3; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
-    h3 { margin: 20px 0 6px; font-size: 18px; }
+    h3 { margin: 18px 0 6px; font-size: 19px; line-height: 1.35; }
     p { margin: 8px 0; }
-    ul, ol { margin: 8px 0 8px 22px; }
+    ul { margin: 8px 0 8px 22px; }
     li { margin: 3px 0; }
     .meta { color: var(--muted); margin-bottom: 16px; }
-    .toolbar {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 12px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin: 16px 0;
-    }
-    .doc-nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 8px 0 6px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .doc-nav a {
-      text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--card);
-    }
-    select { padding: 6px 10px; font-size: 14px; }
-    .note {
-      border-left: 4px solid var(--line);
-      padding: 8px 12px;
-      color: var(--muted);
-      margin: 12px 0 20px;
-      background: #fcfcfd;
-    }
-    .lang-section[hidden] { display: none !important; }
+    .doc-nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0 16px; color: var(--muted); font-size: 14px; }
+    .doc-nav a { text-decoration: none; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); }
+    .note { border-left: 4px solid var(--line); padding: 8px 12px; color: var(--muted); margin: 12px 0 20px; background: #fcfcfd; }
     a { color: var(--link); }
-    hr { border: none; border-top: 1px solid var(--line); margin: 24px 0; }
-    .small { color: var(--muted); font-size: 14px; }
+    code { background: var(--card); padding: 1px 4px; border-radius: 4px; }
+    .small { color: var(--muted); font-size: 14px; margin-top: 28px; }
   </style>
 </head>
 <body>
   <main class="wrap">
     <h1>KopiAI Privacy Policy</h1>
     <div class="meta">
-      <div><strong>Last Updated:</strong> March 21, 2026</div>
-      <div><strong>Effective Date:</strong> March 21, 2026</div>
-      <div><strong>Data Controller / 数据控制者:</strong> KopiAI Developer</div>
-      <div><strong>Privacy Contact / 隐私联系邮箱:</strong> cdlcdl9527@gmail.com</div>
+      <div><strong>Last Updated:</strong> June 8, 2026</div>
+      <div><strong>Effective Date:</strong> June 8, 2026</div>
+      <div><strong>Contact:</strong> cdlcdl9527@gmail.com</div>
     </div>
-
     <div class="doc-nav" aria-label="Document Links">
       <a href="./index.html"><strong>Privacy Policy</strong></a>
       <a href="./terms.html">Terms of Service</a>
     </div>
-
-    <div class="toolbar" aria-label="Language Switcher">
-      <label for="langSelect"><strong>Language / 语言：</strong></label>
-      <select id="langSelect">
-        <option value="en">English</option>
-        <option value="zh">简体中文</option>
-        <option value="id">Bahasa Indonesia</option>
-        <option value="th">ไทย</option>
-        <option value="vi">Tiếng Việt</option>
-        <option value="ms">Bahasa Melayu</option>
-        <option value="tl">Tagalog</option>
-      </select>
-    </div>
-
-    <div class="note">The English version is the authoritative version. Non-English versions are provided for convenience only.</div>
-
-    <section class="lang-section" data-lang="en">
+    <div class="note">This web page mirrors the in-app privacy policy used by the current KopiAI Android release.</div>
+    <section>
+      <p>Last Updated: June 8, 2026</p>
+      <p>Effective Date: June 8, 2026</p>
+      <p>Applicable App: KopiAI</p>
+      <p>Applicable App Versions: All versions</p>
+      <p>Data Controller: KopiAI Developer</p>
+      <p>Privacy Contact: cdlcdl9527@gmail.com</p>
       <h2>1. Introduction and Scope</h2>
-      <p>This Privacy Policy explains how KopiAI ("App") collects, uses, shares, stores, and deletes data.</p>
-      <p>This policy applies to processing through the KopiAI Android app, our backend API gateway (Cloudflare Worker), and integrated third-party SDKs/service providers listed below.</p>
-
+      <p>This Privacy Policy explains how KopiAI (&quot;App&quot;) collects, uses, shares, stores, and deletes data.</p>
+      <p>This policy applies to processing through:</p>
+      <ul>
+        <li>The KopiAI Android app</li>
+        <li>Our backend API gateway (Cloudflare Worker)</li>
+        <li>Integrated third-party SDKs and service providers listed in Section 6</li>
+      </ul>
+      <p>This policy does not apply to third-party products/services not controlled by us.</p>
       <h2>2. Data We Process</h2>
       <p>We follow data minimization and process only data needed for core features, security, abuse prevention, diagnostics, analytics, ads, and legal compliance.</p>
-
-      <h3>2.1 Data You Create in App</h3>
+      <h3>2.1 Data You Create in App (Primarily Local)</h3>
       <ul>
         <li>Translation history</li>
         <li>Vocabulary and learning records</li>
         <li>Generated content history</li>
         <li>App preferences and settings</li>
       </ul>
-
       <h3>2.2 Device and Technical Data</h3>
       <ul>
-        <li>App-generated pseudonymous device identifier (used exclusively for quota management, anti-abuse, and security protection; never linked to your Google Advertising ID, never used for advertising tracking, user profiling, or any purposes not disclosed in this policy)</li>
-        <li>App/device technical metadata</li>
+        <li>App-generated pseudonymous device identifier (used for quota, anti-abuse, and security)</li>
+        <li>App/device technical metadata (for compatibility and diagnostics)</li>
         <li>Network metadata at API edge (for example IP address)</li>
         <li>Security/rate-limit counters and operational metrics</li>
       </ul>
-
-      <h3>2.3 Sensitive Permissions and Boundaries</h3>
+      <h3>2.3 Sensitive Permissions and Data Boundaries</h3>
       <p>Current Android permissions requested by the App:</p>
       <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
+        <li>`CAMERA`</li>
+        <li>`RECORD_AUDIO`</li>
+        <li>`INTERNET`</li>
+        <li>`ACCESS_NETWORK_STATE`</li>
+        <li>Google Play Billing permission</li>
+        <li>Advertising and ads measurement identifiers/attribution/topics permissions</li>
+        <li>`WAKE_LOCK`</li>
       </ul>
+      <p>Important boundaries:</p>
       <ul>
         <li>Camera/microphone permissions are requested only when you actively use related features (not at app launch).</li>
         <li>If you deny camera/microphone permission, related feature(s) will not work, but other core text-based features remain available.</li>
         <li>The App does not currently request location runtime permission.</li>
         <li>We do not use camera/audio permission for unrelated profiling or advertising.</li>
+        <li>Network state is used to check connectivity for online features.</li>
+        <li>Billing permission is used only for Google Play purchase and subscription flows.</li>
+        <li>Advertising identifiers, attribution data, and ad topics signals may be processed by Google advertising, analytics, and install-referrer services for ads, measurement, anti-fraud, campaign attribution, and ad relevance, subject to user device settings.</li>
+        <li>Wake locks may be used by integrated SDKs or background work infrastructure to complete short operational tasks reliably; we do not use them to collect unrelated personal data.</li>
       </ul>
-
       <h3>2.4 Purchases</h3>
-      <p>Google Play Billing processes payment/transaction data. We do not store full payment card details.</p>
-
-      <h3>2.5 Ads, Analytics, Diagnostics</h3>
+      <p>Google Play Billing processes payment and transaction data. We do not store full payment card details.</p>
+      <h3>2.5 Ads, Analytics, and Diagnostics</h3>
+      <p>Depending on app behavior/SDK behavior and your settings, data may be processed for:</p>
       <ul>
         <li>Ad serving/measurement/anti-fraud (AdMob)</li>
         <li>Product analytics (Firebase Analytics)</li>
-        <li>Crash diagnostics (Firebase Crashlytics)</li>
+        <li>Crash reporting/diagnostics (Firebase Crashlytics)</li>
       </ul>
-
       <h2>3. Purposes of Processing</h2>
+      <p>We process data to:</p>
       <ul>
         <li>Provide translation and language-learning features</li>
-        <li>Support network AI features via backend routing</li>
+        <li>Support network AI features through backend routing</li>
         <li>Enforce quota limits and anti-abuse controls</li>
         <li>Serve and measure ads</li>
         <li>Improve app quality and performance</li>
         <li>Detect crashes, security issues, and fraud</li>
         <li>Meet legal obligations</li>
       </ul>
-
       <h2>4. Backend Processing and Retention</h2>
       <p>When network features are used, requests are processed by our backend (Cloudflare Worker).</p>
       <h3>4.1 Backend Data Categories</h3>
       <ul>
-        <li>API request payloads needed to serve requested features</li>
+        <li>API request payloads required to serve requested features</li>
         <li>Pseudonymous device ID headers</li>
         <li>Edge network metadata (for example IP)</li>
         <li>Security, anti-abuse, and rate-limit state</li>
@@ -176,1125 +139,145 @@
         <li>Operate reward challenge/claim integrity flow</li>
         <li>Support operations, reliability, and incident response</li>
       </ul>
-      <h3>4.3 Typical Retention</h3>
+      <h3>4.3 Typical Retention (Operational Stores)</h3>
+      <p>Retention is TTL-based and limited to necessary periods, for example:</p>
       <ul>
         <li>Metrics: up to about 35 days</li>
         <li>Risk/abuse state: short-term TTL (configurable)</li>
         <li>Reward challenge state: short-lived (minutes)</li>
       </ul>
-      <p>If law requires longer retention, legal requirements prevail.</p>
-
-      <h2>5. Server-Side Data Deletion Requests</h2>
-      <p>Even without standalone KopiAI account registration, you may request deletion of linkable server-side data.</p>
-      <p><strong>How to request:</strong></p>
+      <p>Retention may be adjusted for security/operations. If law requires longer retention, legal requirements prevail.</p>
+      <h2>5. Server-Side Data Deletion Requests (Google Play and Legal Compliance)</h2>
+      <p>Even though the App does not provide standalone KopiAI account registration, you may request deletion of server-side data associated with your app usage (for example pseudonymous device ID records, backend risk/metrics records where linkable).</p>
+      <p>How to request deletion:</p>
       <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Subject: "Server Data Deletion Request"</li>
-        <li>Include matching info (for example app-generated device ID, approximate time window, country/region, app version)</li>
+        <li>Use the in-app local data deletion option to delete data stored on your device.</li>
+        <li>For linkable server-side data, email: cdlcdl9527@gmail.com</li>
+        <li>Subject: &quot;Server Data Deletion Request&quot;</li>
+        <li>Include enough information for matching records (for example app-generated device ID, approximate request time window, country/region, app version).</li>
       </ul>
-      <p><strong>Process:</strong></p>
+      <p>Our process:</p>
       <ul>
-        <li>We acknowledge and verify the request.</li>
-        <li>We process valid requests within 30 calendar days (or faster if local law requires).</li>
-        <li>We send completion confirmation by email.</li>
-        <li>If data must be retained for law/security/fraud reasons, we restrict processing to those required purposes and explain why.</li>
+        <li>We acknowledge receipt and begin verification.</li>
+        <li>We process valid requests within 30 calendar days (or faster if required by local law).</li>
+        <li>After completion, we send confirmation by email.</li>
+        <li>If some data must be retained by law/security/fraud-prevention obligations, we restrict processing to those mandatory purposes only and explain the reason.</li>
       </ul>
-
-      <h2>6. Third-Party Services and Sharing</h2>
-      <p>We do not sell personal data for money. Under Google Play policy, developers remain responsible for third-party SDK behavior inside the app.</p>
-      <ol>
-        <li>Google ML Kit (OCR/translation/speech) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob (ads/measurement/anti-fraud) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>AI providers configured by backend (for example Google Gemini API, OpenAI API) -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>,
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>User input data is processed by AI providers only when you actively initiate a networked AI feature, and solely to generate the content you request.</p>
+      <h2>6. Third-Party Services, SDKs, and Sharing</h2>
+      <p>We do not sell personal data for money.</p>
+      <p>Under Google Play policy, developers remain responsible for third-party SDK behavior inside the app. We perform due diligence and require integrated third parties to comply with applicable policies.</p>
+      <p>Third-party services used:</p>
+      <h2>1. Google ML Kit</h2>
+      <ul>
+        <li>Purpose: on-device text recognition, language identification, and translation</li>
+        <li>Camera images and OCR frames are processed on-device by the App/ML Kit and are not uploaded by us to OCR providers.</li>
+        <li>Policy: https://policies.google.com/privacy</li>
+      </ul>
+      <h2>2. Google AdMob</h2>
+      <ul>
+        <li>Purpose: ad serving, ad measurement, anti-fraud</li>
+        <li>Policy: https://policies.google.com/privacy</li>
+      </ul>
+      <h2>3. Google Play Billing / Google Play Services</h2>
+      <ul>
+        <li>Purpose: purchase/subscription validation and Play-related services</li>
+        <li>Policy: https://policies.google.com/privacy</li>
+      </ul>
+      <h2>4. Firebase Analytics</h2>
+      <ul>
+        <li>Purpose: usage analytics</li>
+        <li>Policy: https://firebase.google.com/support/privacy</li>
+      </ul>
+      <h2>5. Firebase Crashlytics</h2>
+      <ul>
+        <li>Purpose: crash diagnostics</li>
+        <li>Policy: https://firebase.google.com/support/privacy</li>
+      </ul>
+      <h2>6. Cloudflare</h2>
+      <ul>
+        <li>Purpose: API gateway, edge security, and traffic handling</li>
+        <li>Policy: https://www.cloudflare.com/privacypolicy/</li>
+      </ul>
+      <h2>7. AI model providers configured by backend</h2>
+      <ul>
+        <li>Example providers: Google Gemini API, OpenAI API</li>
+        <li>Purpose: generate responses for user-requested AI features</li>
+        <li>Policies:</li>
+        <li>Google: https://policies.google.com/privacy</li>
+        <li>OpenAI: https://openai.com/policies/privacy-policy</li>
+      </ul>
       <p>We may disclose data when required by law, legal process, or to protect rights/safety/security.</p>
-
       <h2>7. Advertising and Sensitive Category Restrictions</h2>
+      <p>For ads and ad personalization:</p>
       <ul>
-        <li>We do not intentionally use sensitive categories (race, religion, sexual orientation, health status, financial hardship, etc.) for personalized advertising.</li>
+        <li>We do not intentionally use sensitive categories (such as race, religion, sexual orientation, health status, or financial hardship) for personalized advertising.</li>
         <li>We do not intentionally use your local translation content, vocabulary records, or generated AI content as direct inputs for personalized ad targeting.</li>
-        <li>You can manage ad personalization in Google Ads/device settings.</li>
+        <li>You can control personalization via your Google Ads/device settings.</li>
       </ul>
-
       <h2>8. Sale/Share Statement</h2>
       <ul>
-        <li>Under Google Play policy, "sale" generally refers to exchange/transfer of personal and sensitive data for monetary consideration.</li>
-        <li>Where applicable law defines sale/share more broadly (for example other valuable consideration), we apply applicable legal requirements.</li>
+        <li>Under Google Play policy, &quot;sale&quot; is prohibited and generally refers to exchange/transfer of personal and sensitive data for monetary consideration.</li>
+        <li>Where applicable law defines sale/share more broadly (for example other valuable consideration), we apply applicable legal requirements and honor your rights under those laws.</li>
       </ul>
-
       <h2>9. User Rights and Response Time</h2>
       <p>Depending on your jurisdiction, you may have rights such as access, correction, deletion, portability, objection/restriction, and complaint.</p>
+      <p>How to exercise rights:</p>
       <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>In-app: Settings -> Send Feedback</li>
+        <li>Email: cdlcdl9527@gmail.com</li>
+        <li>In-app: Settings -&gt; Send Feedback</li>
       </ul>
-      <p>We respond to valid requests within 30 calendar days, unless a shorter legal deadline applies.</p>
-
+      <p>Response time:</p>
+      <ul>
+        <li>We respond to valid requests within 30 calendar days, unless a shorter legal deadline applies.</li>
+      </ul>
       <h2>10. No Standalone KopiAI Account</h2>
-      <p>The App currently does not provide standalone KopiAI account registration/login. Account-deletion workflows for in-app accounts do not apply. Server-side deletion requests are handled via Section 5.</p>
-
-      <h2>11. Children</h2>
-      <p>The App is not directed to children. We do not knowingly collect personal data from children under 13, or under a higher minimum age where required by local law. If such data is identified, we will take steps to delete it.</p>
-
-      <h2>12. Security</h2>
+      <p>The App currently does not provide standalone KopiAI account registration/login.</p>
+      <p>Therefore, app-account deletion workflows for in-app accounts do not apply. However, Section 5 explains how to request deletion of linkable server-side data.</p>
+      <h2>11. Children and Age Thresholds</h2>
+      <p>The App is not directed to children.</p>
+      <p>We do not knowingly collect personal data from children under 13, or under a higher minimum age where required by local law. If such data is identified, we will take steps to delete it.</p>
+      <h2>12. Security Measures</h2>
+      <p>We use reasonable technical and organizational safeguards, including:</p>
       <ul>
         <li>HTTPS/TLS for network transmission</li>
         <li>Access controls and least-privilege operations</li>
         <li>Anti-abuse monitoring and security controls</li>
         <li>Incident response procedures</li>
       </ul>
-
+      <p>No method is 100% secure, but we continuously improve safeguards.</p>
       <h2>13. Business Transfer</h2>
+      <p>If a merger, acquisition, reorganization, bankruptcy, or asset transfer occurs:</p>
       <ul>
-        <li>We provide notice before material transfer of personal data (typically at least 30 days where feasible/required).</li>
-        <li>The receiving party must protect data with terms no less protective than this policy.</li>
+        <li>We will provide notice before material transfer of personal data (typically at least 30 days where feasible/required).</li>
+        <li>The receiving party must protect data under terms no less protective than this policy.</li>
         <li>Where legally available, you may request deletion before transfer takes effect.</li>
       </ul>
-
       <h2>14. Cross-Border Processing</h2>
-      <p>Data may be processed outside your country through global providers. We apply safeguards required by applicable law.</p>
-
-      <h2>15. Southeast Asia Compliance</h2>
+      <p>Data may be processed outside your country through global cloud/service providers. We apply safeguards required by applicable law.</p>
+      <h2>15. Regional Compliance (Southeast Asia)</h2>
       <p>For users in Southeast Asia (including Singapore, Indonesia, Thailand, Malaysia, and Vietnam), we process data in accordance with applicable local privacy/data protection requirements, including rights handling and lawful transfer obligations.</p>
-
       <h2>16. Tracking Technologies</h2>
-      <p>The app and SDKs may use identifiers and similar technologies (for example Android advertising identifiers and SDK telemetry) for ads, analytics, diagnostics, security, and anti-fraud.</p>
-      <p>You can manage ad personalization and reset advertising identifiers in Google Ads settings.</p>
-
+      <p>The app and integrated SDKs may use identifiers and similar technologies (for example Android advertising identifiers and SDK telemetry mechanisms) for ads, analytics, diagnostics, security, and anti-fraud.</p>
+      <p>You can manage ad personalization and reset advertising identifiers in device Google Ads settings.</p>
       <h2>17. In-App Prominent Disclosure and Consent</h2>
       <p>Where required by Google Play policy, we provide in-app prominent disclosure and obtain affirmative user action before collecting/processing personal and sensitive data outside reasonable user expectation.</p>
-
       <h2>18. Policy Accessibility and Language</h2>
       <ul>
-        <li>This policy is available in-app (Settings -> Privacy Policy) and on a public HTTPS URL.</li>
-        <li>No login is required to view the web policy.</li>
-        <li>If multiple language versions conflict, the English version controls.</li>
+        <li>This policy is made available in-app (Settings -&gt; Privacy Policy) and should also be published on a publicly accessible HTTPS URL in Play listing.</li>
+        <li>No login should be required to view the web policy.</li>
+        <li>If multiple language versions exist, the English version controls in case of conflict.</li>
       </ul>
-
       <h2>19. Changes to This Policy</h2>
-      <p>We may update this policy when app features, service providers, legal requirements, or data processing practices change.</p>
+      <p>We may update this policy when features, providers, legal requirements, or processing practices change.</p>
       <p>For material changes, we provide prominent notice where required.</p>
-
       <h2>20. Contact</h2>
+      <p>Privacy requests and complaints:</p>
       <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>In-app feedback: Settings -> Send Feedback</li>
+        <li>Email: cdlcdl9527@gmail.com</li>
+        <li>In-app feedback: Settings -&gt; Send Feedback</li>
       </ul>
     </section>
-
-    <section class="lang-section" data-lang="zh" hidden>
-      <h2>1. 适用范围</h2>
-      <p>本隐私政策说明 KopiAI（“本应用”）如何收集、使用、共享、存储和删除数据。</p>
-      <p>本政策适用于 KopiAI Android 应用、我们的后端 API 网关（Cloudflare Worker）、以及第 6 节列出的第三方 SDK 与服务商。</p>
-
-      <h2>2. 我们处理的数据</h2>
-      <p>我们遵循最小必要原则，仅处理实现核心功能、安全风控、反滥用、诊断分析、广告与法律合规所需的数据。</p>
-
-      <h3>2.1 你在应用内创建的数据</h3>
-      <ul>
-        <li>翻译历史</li>
-        <li>词汇与学习记录</li>
-        <li>AI 生成内容历史</li>
-        <li>应用偏好设置</li>
-      </ul>
-
-      <h3>2.2 设备与技术数据</h3>
-      <ul>
-        <li>应用生成的假名化设备标识（仅用于配额管理、反滥用与安全防护；不会与 Google Advertising ID 关联，不会用于广告跟踪、用户画像或本政策未披露用途）</li>
-        <li>应用/设备技术元数据</li>
-        <li>API 边缘网络元数据（如 IP）</li>
-        <li>安全、限流与运维指标</li>
-      </ul>
-
-      <h3>2.3 敏感权限与边界</h3>
-      <p>当前 Android 权限：</p>
-      <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
-      </ul>
-      <ul>
-        <li>相机/麦克风权限仅在你主动使用对应功能时请求，不会在启动时强制请求。</li>
-        <li>若拒绝相机/麦克风权限，仅对应功能不可用，其他文本类核心功能仍可使用。</li>
-        <li>当前实现不申请定位运行时权限。</li>
-        <li>我们不会将相机/音频权限用于无关画像或广告用途。</li>
-      </ul>
-
-      <h3>2.4 支付与订阅</h3>
-      <p>应用内购买由 Google Play Billing 处理，我们不存储完整银行卡信息。</p>
-
-      <h3>2.5 广告、分析与诊断</h3>
-      <ul>
-        <li>AdMob 广告投放/测量/反作弊</li>
-        <li>Firebase Analytics 产品分析</li>
-        <li>Firebase Crashlytics 崩溃诊断</li>
-      </ul>
-
-      <h2>3. 数据用途</h2>
-      <ul>
-        <li>提供翻译与语言学习功能</li>
-        <li>通过后端路由支持联网 AI 功能</li>
-        <li>执行配额与反滥用控制</li>
-        <li>展示与测量广告</li>
-        <li>提升应用质量与性能</li>
-        <li>识别崩溃、安全问题与欺诈行为</li>
-        <li>履行法律义务</li>
-      </ul>
-
-      <h2>4. 后端处理与保留</h2>
-      <p>使用联网功能时，请求会经过我们的 Cloudflare Worker 后端。</p>
-      <h3>4.1 后端处理数据类别</h3>
-      <ul>
-        <li>提供服务所需的 API 请求内容</li>
-        <li>假名化设备标识头</li>
-        <li>边缘网络元数据（如 IP）</li>
-        <li>安全、反滥用、限流状态</li>
-      </ul>
-      <h3>4.2 后端处理目的</h3>
-      <ul>
-        <li>路由请求到已配置模型服务商</li>
-        <li>防重放、防滥用、防欺诈与限流</li>
-        <li>维护奖励 challenge/claim 完整性</li>
-        <li>支持运维监控与事件处置</li>
-      </ul>
-      <h3>4.3 典型保留周期</h3>
-      <ul>
-        <li>指标数据约 35 天</li>
-        <li>风控/反滥用状态短周期（可配置）</li>
-        <li>奖励 challenge 状态为分钟级短周期</li>
-        <li>临时缓存数据会在完成对应 API 请求后自动删除；如出于安全或反滥用目的必须保留，则按最小必要范围保留。</li>
-      </ul>
-      <p>如法律要求更长保留，按法律要求执行。</p>
-
-      <h2>5. 服务器侧数据删除请求</h2>
-      <p>即使本应用没有独立 KopiAI 账号系统，你仍可请求删除可关联的服务器侧数据。</p>
-      <ul>
-        <li>邮箱：<strong>cdlcdl9527@gmail.com</strong></li>
-        <li>主题：<code>Server Data Deletion Request</code></li>
-        <li>请提供匹配信息（如应用生成设备标识、时间范围、地区、应用版本）</li>
-      </ul>
-      <ul>
-        <li>我们会确认并核验请求。</li>
-        <li>对有效请求，我们会在 30 个自然日内完成处理（如地方法律要求更短，以其为准）。</li>
-        <li>处理完成后通过邮件确认。</li>
-        <li>若部分数据因法律/安全/反欺诈义务必须保留，我们将仅限于该目的处理并告知原因。</li>
-      </ul>
-
-      <h2>6. 第三方服务与共享</h2>
-      <p>我们不会以金钱对价出售个人数据。根据 Google Play 政策，开发者对集成 SDK 的数据行为承担合规责任。</p>
-      <ol>
-        <li>Google ML Kit（OCR/翻译/语音相关） - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob（广告投放/测量/反作弊） - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services（支付与 Play 服务） - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics（使用分析） - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics（崩溃诊断） - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare（API 网关与边缘安全） - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>后端配置的 AI 服务商（如 Google Gemini、OpenAI） -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>、
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>仅当你主动触发联网 AI 功能时，相关输入数据才会发送至 AI 服务商，并且仅用于生成你请求的结果。</p>
-      <p>在法律要求、司法程序或保护权利/安全需要时，我们可能依法披露必要数据。</p>
-
-      <h2>7. 广告敏感类别限制</h2>
-      <ul>
-        <li>不会故意基于敏感类别（种族、宗教、性取向、健康、财务困境等）进行个性化广告。</li>
-        <li>不会故意将你的本地翻译内容、词汇记录、AI 生成内容直接用于个性化广告定向。</li>
-        <li>你可在设备 Google Ads 设置中管理个性化广告。</li>
-      </ul>
-
-      <h2>8. 出售/共享声明</h2>
-      <ul>
-        <li>在 Google Play 口径下，“出售”通常指以金钱对价交换/传输个人与敏感数据。</li>
-        <li>若适用法律对 sale/share 口径更广（如“其他有价值对价”），我们按当地法律执行并保障你的法定权利。</li>
-      </ul>
-
-      <h2>9. 用户权利与响应时限</h2>
-      <p>你在适用法下可能享有访问、更正、删除、可携带、限制/反对处理、投诉等权利。</p>
-      <ul>
-        <li>邮箱：<strong>cdlcdl9527@gmail.com</strong></li>
-        <li>应用内：Settings -> Send Feedback</li>
-      </ul>
-      <p>对有效请求通常在 30 个自然日内响应；如地方法律要求更短，以其为准。</p>
-
-      <h2>10. 无独立 KopiAI 账号</h2>
-      <p>当前应用不提供 KopiAI 独立注册/登录。因此不适用“应用内账号删除流程”；服务器侧可关联数据删除请按第 5 节申请。</p>
-
-      <h2>11. 儿童保护</h2>
-      <p>本应用不面向儿童。我们不会明知收集 13 岁以下或当地法律要求更高最低年龄以下用户的个人数据。如识别到此类数据，我们将采取措施删除。</p>
-
-      <h2>12. 安全措施</h2>
-      <ul>
-        <li>HTTPS/TLS 用于网络传输</li>
-        <li>访问控制与最小权限操作</li>
-        <li>反滥用监控与安全控制</li>
-        <li>事件响应流程</li>
-      </ul>
-
-      <h2>13. 业务转让</h2>
-      <ul>
-        <li>在可行/法律要求下，通常至少提前 30 天通知。</li>
-        <li>受让方须履行不低于本政策的保护义务。</li>
-        <li>在法律允许范围内，你可在转让生效前申请删除数据。</li>
-      </ul>
-
-      <h2>14. 跨境处理</h2>
-      <p>数据可能通过全球服务商在你所在国家/地区之外处理。我们将按适用法律采取必要保障措施。</p>
-
-      <h2>15. 东南亚地区合规</h2>
-      <p>针对东南亚用户（包括新加坡、印尼、泰国、马来西亚、越南），我们按照当地适用隐私与数据保护要求处理数据，包括权利处理与合法跨境传输义务。</p>
-
-      <h2>16. 跟踪技术</h2>
-      <p>应用及 SDK 可能使用标识符与类似技术（如广告标识符、SDK 遥测机制）用于广告、分析、诊断、安全与反作弊。</p>
-      <p>你可在设备 Google Ads 设置中管理个性化广告与重置广告标识符。</p>
-
-      <h2>17. 应用内显著披露与同意</h2>
-      <p>在 Google Play 政策要求的情况下，我们会提供应用内显著披露，并在超出合理用户预期收集/处理个人及敏感数据前取得肯定性用户操作。</p>
-
-      <h2>18. 可访问性与语言</h2>
-      <ul>
-        <li>本政策可在应用内（Settings -> Privacy Policy）访问，并发布于公开 HTTPS 页面。</li>
-        <li>访问网页版本无需登录。</li>
-        <li>多语言版本存在差异时，以英文版为准。</li>
-      </ul>
-
-      <h2>19. 政策更新</h2>
-      <p>当应用功能、服务商、法律要求或数据处理方式变化时，我们可能更新本政策。</p>
-      <p>对于重大变更，我们会在需要时提供显著通知。</p>
-
-      <h2>20. 联系方式</h2>
-      <ul>
-        <li>邮箱：<strong>cdlcdl9527@gmail.com</strong></li>
-        <li>应用内反馈：Settings -> Send Feedback</li>
-      </ul>
-    </section>
-
-    <section class="lang-section" data-lang="id" hidden>
-      <h2>1. Pendahuluan dan Ruang Lingkup</h2>
-      <p>Kebijakan Privasi ini menjelaskan bagaimana KopiAI ("Aplikasi") mengumpulkan, menggunakan, membagikan, menyimpan, dan menghapus data.</p>
-      <p>Kebijakan ini berlaku untuk aplikasi Android KopiAI, backend API gateway kami (Cloudflare Worker), serta SDK/penyedia layanan pihak ketiga yang terintegrasi.</p>
-
-      <h2>2. Data yang Kami Proses</h2>
-      <p>Kami menerapkan minimisasi data dan hanya memproses data yang diperlukan untuk fitur inti, keamanan, pencegahan penyalahgunaan, diagnostik, analitik, iklan, dan kepatuhan hukum.</p>
-
-      <h3>2.1 Data yang Anda Buat di Aplikasi</h3>
-      <ul>
-        <li>Riwayat terjemahan</li>
-        <li>Catatan kosakata dan pembelajaran</li>
-        <li>Riwayat konten yang dihasilkan AI</li>
-        <li>Preferensi dan pengaturan aplikasi</li>
-      </ul>
-
-      <h3>2.2 Data Perangkat dan Teknis</h3>
-      <ul>
-        <li>Pengecam perangkat pseudonim yang dibuat aplikasi (digunakan hanya untuk manajemen kuota, anti-penyalahgunaan, dan perlindungan keamanan; tidak pernah ditautkan ke Google Advertising ID Anda, tidak digunakan untuk pelacakan iklan, profil pengguna, atau tujuan di luar kebijakan ini)</li>
-        <li>Metadata teknis aplikasi/perangkat</li>
-        <li>Metadata jaringan di edge API (misalnya alamat IP)</li>
-        <li>Status keamanan, rate-limit, dan metrik operasional</li>
-      </ul>
-
-      <h3>2.3 Izin Sensitif dan Batasan</h3>
-      <p>Izin Android yang saat ini diminta:</p>
-      <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
-      </ul>
-      <ul>
-        <li>Izin kamera/mikrofon diminta hanya saat Anda aktif menggunakan fitur terkait (bukan saat aplikasi dibuka).</li>
-        <li>Jika Anda menolak izin kamera/mikrofon, fitur terkait tidak akan berfungsi, tetapi fitur teks inti tetap tersedia.</li>
-        <li>Aplikasi saat ini tidak meminta izin runtime lokasi.</li>
-        <li>Izin kamera/audio tidak digunakan untuk profiling atau iklan yang tidak terkait.</li>
-      </ul>
-
-      <h3>2.4 Pembelian</h3>
-      <p>Google Play Billing memproses data pembayaran/transaksi. Kami tidak menyimpan detail penuh kartu pembayaran.</p>
-
-      <h3>2.5 Iklan, Analitik, dan Diagnostik</h3>
-      <ul>
-        <li>Penayangan/pengukuran iklan dan anti-fraud (AdMob)</li>
-        <li>Analitik produk (Firebase Analytics)</li>
-        <li>Diagnostik crash (Firebase Crashlytics)</li>
-      </ul>
-
-      <h2>3. Tujuan Pemrosesan</h2>
-      <ul>
-        <li>Menyediakan fitur terjemahan dan pembelajaran bahasa</li>
-        <li>Mendukung fitur AI berbasis jaringan melalui backend routing</li>
-        <li>Menerapkan batas kuota dan kontrol anti-penyalahgunaan</li>
-        <li>Menyajikan dan mengukur iklan</li>
-        <li>Meningkatkan kualitas dan performa aplikasi</li>
-        <li>Mendeteksi crash, isu keamanan, dan fraud</li>
-        <li>Memenuhi kewajiban hukum</li>
-      </ul>
-
-      <h2>4. Pemrosesan Backend dan Retensi</h2>
-      <p>Saat fitur jaringan digunakan, permintaan diproses oleh backend kami (Cloudflare Worker).</p>
-      <h3>4.1 Kategori Data Backend</h3>
-      <ul>
-        <li>Payload permintaan API yang diperlukan untuk layanan yang diminta</li>
-        <li>Header ID perangkat pseudonim</li>
-        <li>Metadata jaringan edge (misalnya IP)</li>
-        <li>Status keamanan, anti-penyalahgunaan, dan rate-limit</li>
-      </ul>
-      <h3>4.2 Tujuan Backend</h3>
-      <ul>
-        <li>Merutekan permintaan ke penyedia model yang dikonfigurasi</li>
-        <li>Mencegah penyalahgunaan/fraud/replay dan menegakkan limit</li>
-        <li>Menjaga integritas alur reward challenge/claim</li>
-        <li>Mendukung operasi, keandalan, dan respons insiden</li>
-      </ul>
-      <h3>4.3 Retensi Umum</h3>
-      <ul>
-        <li>Metrik: hingga sekitar 35 hari</li>
-        <li>Status risiko/penyalahgunaan: TTL jangka pendek (dapat dikonfigurasi)</li>
-        <li>Status reward challenge: jangka sangat pendek (menit)</li>
-        <li>Data cache sementara dihapus otomatis setelah transaksi API selesai, kecuali perlu disimpan untuk tujuan keamanan atau anti-penyalahgunaan.</li>
-      </ul>
-      <p>Jika hukum mewajibkan retensi lebih lama, ketentuan hukum yang berlaku akan diutamakan.</p>
-
-      <h2>5. Permintaan Penghapusan Data Sisi Server</h2>
-      <p>Bahkan tanpa registrasi akun KopiAI mandiri, Anda dapat meminta penghapusan data sisi server yang dapat ditautkan.</p>
-      <p><strong>Cara mengajukan:</strong></p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Subjek: "Server Data Deletion Request"</li>
-        <li>Sertakan informasi pencocokan (misalnya ID perangkat buatan aplikasi, perkiraan rentang waktu, negara/wilayah, versi aplikasi)</li>
-      </ul>
-      <p><strong>Proses:</strong></p>
-      <ul>
-        <li>Kami mengakui dan memverifikasi permintaan.</li>
-        <li>Permintaan valid diproses dalam 30 hari kalender (atau lebih cepat jika hukum lokal mensyaratkan).</li>
-        <li>Kami mengirim konfirmasi penyelesaian melalui email.</li>
-        <li>Jika data wajib disimpan untuk alasan hukum/keamanan/fraud, pemrosesan dibatasi pada tujuan yang diwajibkan dan alasannya dijelaskan.</li>
-      </ul>
-
-      <h2>6. Layanan Pihak Ketiga dan Pembagian Data</h2>
-      <p>Kami tidak menjual data pribadi untuk uang. Berdasarkan kebijakan Google Play, pengembang tetap bertanggung jawab atas perilaku data SDK pihak ketiga di dalam aplikasi.</p>
-      <ol>
-        <li>Google ML Kit (OCR/translation/speech) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob (ads/measurement/anti-fraud) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>Penyedia AI yang dikonfigurasi backend (misalnya Google Gemini API, OpenAI API) -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>,
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>Data input pengguna diproses oleh penyedia AI hanya ketika Anda secara aktif memulai fitur AI berbasis jaringan, dan hanya untuk menghasilkan konten yang Anda minta.</p>
-      <p>Kami dapat mengungkapkan data bila diwajibkan hukum, proses hukum, atau untuk melindungi hak/keamanan/keselamatan.</p>
-
-      <h2>7. Pembatasan Iklan Kategori Sensitif</h2>
-      <ul>
-        <li>Kami tidak secara sengaja menggunakan kategori sensitif (ras, agama, orientasi seksual, status kesehatan, kesulitan finansial, dll.) untuk iklan yang dipersonalisasi.</li>
-        <li>Kami tidak secara sengaja menggunakan konten terjemahan lokal, catatan kosakata, atau konten AI yang dihasilkan sebagai input langsung untuk penargetan iklan personal.</li>
-        <li>Anda dapat mengatur personalisasi iklan di Google Ads/pengaturan perangkat.</li>
-      </ul>
-
-      <h2>8. Pernyataan Sale/Share</h2>
-      <ul>
-        <li>Dalam kebijakan Google Play, "sale" umumnya mengacu pada pertukaran/transfer data pribadi dan sensitif untuk imbalan moneter.</li>
-        <li>Jika hukum yang berlaku mendefinisikan sale/share lebih luas (misalnya imbalan bernilai lain), kami menerapkan persyaratan hukum yang berlaku.</li>
-      </ul>
-
-      <h2>9. Hak Pengguna dan Waktu Respons</h2>
-      <p>Bergantung yurisdiksi Anda, Anda dapat memiliki hak seperti akses, koreksi, penghapusan, portabilitas, keberatan/pembatasan, dan pengaduan.</p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Dalam aplikasi: Settings -> Send Feedback</li>
-      </ul>
-      <p>Kami merespons permintaan valid dalam 30 hari kalender, kecuali tenggat hukum yang lebih singkat berlaku.</p>
-
-      <h2>10. Tidak Ada Akun KopiAI Mandiri</h2>
-      <p>Aplikasi saat ini tidak menyediakan registrasi/login akun KopiAI mandiri. Alur penghapusan akun dalam aplikasi tidak berlaku. Permintaan penghapusan data sisi server ditangani melalui Bagian 5.</p>
-
-      <h2>11. Anak</h2>
-      <p>Aplikasi ini tidak ditujukan untuk anak-anak. Kami tidak dengan sengaja mengumpulkan data pribadi dari anak di bawah 13 tahun, atau di bawah usia minimum yang lebih tinggi jika diwajibkan hukum setempat. Jika data tersebut teridentifikasi, kami akan mengambil langkah untuk menghapusnya.</p>
-
-      <h2>12. Keamanan</h2>
-      <ul>
-        <li>HTTPS/TLS untuk transmisi jaringan</li>
-        <li>Kontrol akses dan operasi dengan hak minimum</li>
-        <li>Pemantauan anti-penyalahgunaan dan kontrol keamanan</li>
-        <li>Prosedur respons insiden</li>
-      </ul>
-
-      <h2>13. Transfer Bisnis</h2>
-      <ul>
-        <li>Kami memberikan pemberitahuan sebelum transfer material data pribadi (umumnya setidaknya 30 hari bila layak/diwajibkan).</li>
-        <li>Pihak penerima wajib melindungi data dengan standar yang tidak kurang dari kebijakan ini.</li>
-        <li>Jika tersedia secara hukum, Anda dapat meminta penghapusan sebelum transfer berlaku.</li>
-      </ul>
-
-      <h2>14. Pemrosesan Lintas Batas</h2>
-      <p>Data dapat diproses di luar negara Anda melalui penyedia global. Kami menerapkan perlindungan yang diwajibkan oleh hukum yang berlaku.</p>
-
-      <h2>15. Kepatuhan Asia Tenggara</h2>
-      <p>Untuk pengguna di Asia Tenggara (termasuk Singapura, Indonesia, Thailand, Malaysia, dan Vietnam), kami memproses data sesuai persyaratan privasi/perlindungan data lokal yang berlaku, termasuk penanganan hak dan kewajiban transfer yang sah.</p>
-
-      <h2>16. Teknologi Pelacakan</h2>
-      <p>Aplikasi dan SDK dapat menggunakan identifier dan teknologi serupa (misalnya Android advertising identifiers dan telemetry SDK) untuk iklan, analitik, diagnostik, keamanan, dan anti-fraud.</p>
-      <p>Anda dapat mengelola personalisasi iklan dan mereset advertising identifier di pengaturan Google Ads.</p>
-
-      <h2>17. Pengungkapan Menonjol dalam Aplikasi dan Persetujuan</h2>
-      <p>Jika diwajibkan kebijakan Google Play, kami menyediakan pengungkapan menonjol di dalam aplikasi dan memperoleh tindakan afirmatif pengguna sebelum mengumpulkan/memproses data pribadi dan sensitif di luar ekspektasi wajar pengguna.</p>
-
-      <h2>18. Aksesibilitas Kebijakan dan Bahasa</h2>
-      <ul>
-        <li>Kebijakan ini tersedia di dalam aplikasi (Settings -> Privacy Policy) dan di URL HTTPS publik.</li>
-        <li>Tidak diperlukan login untuk melihat versi web kebijakan.</li>
-        <li>Jika terdapat konflik antarversi bahasa, versi bahasa Inggris yang berlaku.</li>
-      </ul>
-
-      <h2>19. Perubahan Kebijakan Ini</h2>
-      <p>Kami dapat memperbarui kebijakan ini ketika fitur aplikasi, penyedia layanan, persyaratan hukum, atau praktik pemrosesan data berubah.</p>
-      <p>Untuk perubahan material, kami memberikan pemberitahuan menonjol bila diperlukan.</p>
-
-      <h2>20. Kontak</h2>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Umpan balik dalam aplikasi: Settings -> Send Feedback</li>
-      </ul>
-    </section>
-
-    <section class="lang-section" data-lang="th" hidden>
-      <h2>1. บทนำและขอบเขต</h2>
-      <p>นโยบายความเป็นส่วนตัวนี้อธิบายว่า KopiAI ("แอป") เก็บ ใช้ เปิดเผย จัดเก็บ และลบข้อมูลอย่างไร</p>
-      <p>นโยบายนี้ใช้กับแอป Android ของ KopiAI, ระบบ backend API gateway ของเรา (Cloudflare Worker), และ SDK/ผู้ให้บริการบุคคลที่สามที่รวมอยู่ในแอป</p>
-
-      <h2>2. ข้อมูลที่เราประมวลผล</h2>
-      <p>เราใช้หลักการเก็บข้อมูลเท่าที่จำเป็น และประมวลผลเฉพาะข้อมูลที่จำเป็นต่อฟีเจอร์หลัก ความปลอดภัย การป้องกันการใช้งานผิดปกติ การวิเคราะห์ การโฆษณา และการปฏิบัติตามกฎหมาย</p>
-
-      <h3>2.1 ข้อมูลที่คุณสร้างในแอป</h3>
-      <ul>
-        <li>ประวัติการแปล</li>
-        <li>คำศัพท์และบันทึกการเรียนรู้</li>
-        <li>ประวัติเนื้อหาที่สร้างโดย AI</li>
-        <li>การตั้งค่าและค่ากำหนดของแอป</li>
-      </ul>
-
-      <h3>2.2 ข้อมูลอุปกรณ์และข้อมูลทางเทคนิค</h3>
-      <ul>
-        <li>รหัสอุปกรณ์แบบนามแฝงที่แอปสร้างขึ้น (ใช้เฉพาะเพื่อจัดการโควตา ป้องกันการละเมิด และความปลอดภัย; ไม่เชื่อมโยงกับ Google Advertising ID ของคุณ และไม่ใช้เพื่อการติดตามโฆษณา การทำโปรไฟล์ผู้ใช้ หรือวัตถุประสงค์ที่นอกเหนือจากนโยบายนี้)</li>
-        <li>ข้อมูลทางเทคนิคของแอป/อุปกรณ์</li>
-        <li>ข้อมูลเครือข่ายที่ API edge (เช่น IP)</li>
-        <li>สถานะด้านความปลอดภัย การจำกัดอัตรา และเมตริกการปฏิบัติการ</li>
-      </ul>
-
-      <h3>2.3 สิทธิ์ที่อ่อนไหวและขอบเขตการใช้งาน</h3>
-      <p>สิทธิ์ Android ปัจจุบันที่แอปขอ:</p>
-      <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
-      </ul>
-      <ul>
-        <li>จะขอสิทธิ์กล้อง/ไมโครโฟนเฉพาะเมื่อคุณกดใช้ฟีเจอร์ที่เกี่ยวข้อง (ไม่ขอทันทีเมื่อเปิดแอป)</li>
-        <li>หากคุณปฏิเสธสิทธิ์กล้อง/ไมโครโฟน ฟีเจอร์ที่เกี่ยวข้องจะไม่ทำงาน แต่ฟีเจอร์ข้อความหลักยังใช้งานได้</li>
-        <li>ปัจจุบันแอปไม่ขอสิทธิ์ตำแหน่งแบบ runtime</li>
-        <li>เราไม่ใช้สิทธิ์กล้อง/เสียงเพื่อทำโปรไฟล์หรือโฆษณาที่ไม่เกี่ยวข้อง</li>
-      </ul>
-
-      <h3>2.4 การชำระเงิน</h3>
-      <p>Google Play Billing ประมวลผลข้อมูลการชำระเงิน/ธุรกรรม และเราไม่จัดเก็บข้อมูลบัตรชำระเงินแบบเต็ม</p>
-
-      <h3>2.5 โฆษณา การวิเคราะห์ และการวินิจฉัย</h3>
-      <ul>
-        <li>โฆษณา/การวัดผล/ป้องกันการทุจริต (AdMob)</li>
-        <li>การวิเคราะห์ผลิตภัณฑ์ (Firebase Analytics)</li>
-        <li>การวินิจฉัยการล่ม (Firebase Crashlytics)</li>
-      </ul>
-
-      <h2>3. วัตถุประสงค์ของการประมวลผล</h2>
-      <ul>
-        <li>ให้บริการฟีเจอร์แปลภาษาและการเรียนรู้ภาษา</li>
-        <li>รองรับฟีเจอร์ AI ออนไลน์ผ่าน backend routing</li>
-        <li>ควบคุมโควตาและป้องกันการใช้งานผิดปกติ</li>
-        <li>แสดงและวัดผลโฆษณา</li>
-        <li>ปรับปรุงคุณภาพและประสิทธิภาพของแอป</li>
-        <li>ตรวจจับการล่ม ปัญหาความปลอดภัย และการทุจริต</li>
-        <li>ปฏิบัติตามข้อกำหนดทางกฎหมาย</li>
-      </ul>
-
-      <h2>4. การประมวลผลฝั่งเซิร์ฟเวอร์และการเก็บรักษา</h2>
-      <p>เมื่อใช้ฟีเจอร์เครือข่าย คำขอจะถูกประมวลผลผ่าน backend ของเรา (Cloudflare Worker)</p>
-      <h3>4.1 หมวดหมู่ข้อมูลฝั่ง Backend</h3>
-      <ul>
-        <li>Payload ของ API ที่จำเป็นต่อการให้บริการตามคำขอ</li>
-        <li>ส่วนหัว ID อุปกรณ์แบบนามแฝง</li>
-        <li>Metadata เครือข่ายที่ edge (เช่น IP)</li>
-        <li>สถานะความปลอดภัย ป้องกันการละเมิด และการจำกัดอัตรา</li>
-      </ul>
-      <h3>4.2 วัตถุประสงค์ของ Backend</h3>
-      <ul>
-        <li>ส่งต่อคำขอไปยังผู้ให้บริการโมเดลที่กำหนดค่าไว้</li>
-        <li>ป้องกันการละเมิด/ทุจริต/โจมตีซ้ำ และบังคับใช้ข้อจำกัด</li>
-        <li>ดูแลความถูกต้องของระบบ reward challenge/claim</li>
-        <li>รองรับการปฏิบัติการ ความน่าเชื่อถือ และการรับมือเหตุการณ์</li>
-      </ul>
-      <h3>4.3 ระยะเวลาเก็บรักษาทั่วไป</h3>
-      <ul>
-        <li>เมตริก: สูงสุดประมาณ 35 วัน</li>
-        <li>สถานะความเสี่ยง/การละเมิด: TTL ระยะสั้น (ปรับค่าได้)</li>
-        <li>สถานะ reward challenge: ระยะสั้นมาก (นาที)</li>
-        <li>ข้อมูลแคชชั่วคราวจะถูกลบอัตโนมัติหลังธุรกรรม API เสร็จสิ้น ยกเว้นกรณีจำเป็นต้องเก็บเพื่อความปลอดภัยหรือการป้องกันการละเมิด</li>
-      </ul>
-      <p>หากกฎหมายกำหนดให้เก็บนานกว่า ให้ยึดตามข้อกำหนดทางกฎหมาย</p>
-
-      <h2>5. คำขอลบข้อมูลฝั่งเซิร์ฟเวอร์</h2>
-      <p>แม้ไม่มีบัญชี KopiAI แบบแยกต่างหาก คุณยังสามารถขอให้ลบข้อมูลฝั่งเซิร์ฟเวอร์ที่เชื่อมโยงได้</p>
-      <p><strong>วิธีส่งคำขอ:</strong></p>
-      <ul>
-        <li>อีเมล: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>หัวข้อ: "Server Data Deletion Request"</li>
-        <li>โปรดระบุข้อมูลสำหรับจับคู่ (เช่น ID อุปกรณ์ที่แอปสร้าง ช่วงเวลา ประเทศ/ภูมิภาค เวอร์ชันแอป)</li>
-      </ul>
-      <p><strong>กระบวนการ:</strong></p>
-      <ul>
-        <li>เราจะยืนยันการรับคำขอและตรวจสอบความถูกต้อง</li>
-        <li>คำขอที่ถูกต้องจะดำเนินการภายใน 30 วันปฏิทิน (หรือเร็วกว่า หากกฎหมายท้องถิ่นกำหนด)</li>
-        <li>เราส่งการยืนยันการดำเนินการเสร็จสิ้นทางอีเมล</li>
-        <li>หากต้องเก็บข้อมูลบางส่วนตามกฎหมาย/ความปลอดภัย/การป้องกันการทุจริต เราจะจำกัดการประมวลผลเฉพาะวัตถุประสงค์ที่จำเป็นและแจ้งเหตุผล</li>
-      </ul>
-
-      <h2>6. บริการบุคคลที่สามและการแบ่งปันข้อมูล</h2>
-      <p>เราไม่ขายข้อมูลส่วนบุคคลเพื่อแลกเงิน ตามนโยบาย Google Play นักพัฒนายังคงต้องรับผิดชอบต่อพฤติกรรมข้อมูลของ SDK บุคคลที่สามในแอป</p>
-      <ol>
-        <li>Google ML Kit (OCR/translation/speech) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob (ads/measurement/anti-fraud) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>ผู้ให้บริการ AI ที่กำหนดใน backend (เช่น Google Gemini API, OpenAI API) -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>,
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>ข้อมูลอินพุตของผู้ใช้จะถูกประมวลผลโดยผู้ให้บริการ AI เฉพาะเมื่อคุณเริ่มใช้ฟีเจอร์ AI แบบเครือข่ายด้วยตนเอง และใช้เพื่อสร้างผลลัพธ์ตามที่คุณร้องขอเท่านั้น</p>
-      <p>เราอาจเปิดเผยข้อมูลเมื่อกฎหมายกำหนด กระบวนการทางกฎหมายกำหนด หรือเพื่อปกป้องสิทธิ์/ความปลอดภัย</p>
-
-      <h2>7. ข้อจำกัดโฆษณาตามหมวดอ่อนไหว</h2>
-      <ul>
-        <li>เราไม่ตั้งใจใช้หมวดข้อมูลอ่อนไหว (เช่น เชื้อชาติ ศาสนา รสนิยมทางเพศ สุขภาพ สถานะการเงิน) เพื่อโฆษณาแบบเฉพาะบุคคล</li>
-        <li>เราไม่ตั้งใจใช้เนื้อหาแปลในเครื่อง บันทึกคำศัพท์ หรือเนื้อหา AI ที่สร้างขึ้นเป็นอินพุตโดยตรงสำหรับการกำหนดเป้าหมายโฆษณาแบบเฉพาะบุคคล</li>
-        <li>คุณสามารถจัดการการปรับแต่งโฆษณาได้ใน Google Ads/การตั้งค่าอุปกรณ์</li>
-      </ul>
-
-      <h2>8. คำชี้แจงการขาย/การแบ่งปันข้อมูล</h2>
-      <ul>
-        <li>ตามนโยบาย Google Play คำว่า "sale" โดยทั่วไปหมายถึงการแลกเปลี่ยน/โอนข้อมูลส่วนบุคคลหรือข้อมูลอ่อนไหวเพื่อผลตอบแทนทางการเงิน</li>
-        <li>หากกฎหมายที่ใช้บังคับนิยาม sale/share กว้างกว่า (เช่น ผลตอบแทนที่มีมูลค่าอื่น) เราจะปฏิบัติตามข้อกำหนดทางกฎหมายนั้น</li>
-      </ul>
-
-      <h2>9. สิทธิของผู้ใช้และระยะเวลาตอบกลับ</h2>
-      <p>ขึ้นอยู่กับเขตอำนาจของคุณ คุณอาจมีสิทธิ เช่น การเข้าถึง การแก้ไข การลบ การโอนย้าย การคัดค้าน/จำกัดการประมวลผล และการร้องเรียน</p>
-      <ul>
-        <li>อีเมล: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>ในแอป: Settings -> Send Feedback</li>
-      </ul>
-      <p>เราตอบคำขอที่ถูกต้องภายใน 30 วันปฏิทิน เว้นแต่กฎหมายกำหนดระยะเวลาที่สั้นกว่า</p>
-
-      <h2>10. ไม่มีบัญชี KopiAI แบบแยกต่างหาก</h2>
-      <p>ปัจจุบันแอปไม่มีระบบสมัคร/เข้าสู่ระบบบัญชี KopiAI แยกต่างหาก กระบวนการลบบัญชีในแอปจึงไม่ใช้บังคับ และการลบข้อมูลฝั่งเซิร์ฟเวอร์ให้เป็นไปตามข้อ 5</p>
-
-      <h2>11. เด็ก</h2>
-      <p>แอปนี้ไม่ได้มุ่งเป้าไปยังเด็ก เราไม่เก็บข้อมูลส่วนบุคคลของเด็กอายุต่ำกว่า 13 ปี หรืออายุต่ำกว่าขั้นต่ำที่สูงกว่าตามที่กฎหมายท้องถิ่นกำหนดโดยเจตนา หากพบข้อมูลดังกล่าว เราจะดำเนินการลบข้อมูล</p>
-
-      <h2>12. ความปลอดภัย</h2>
-      <ul>
-        <li>HTTPS/TLS สำหรับการรับส่งข้อมูลผ่านเครือข่าย</li>
-        <li>การควบคุมการเข้าถึงและการปฏิบัติงานตามหลักสิทธิ์เท่าที่จำเป็น</li>
-        <li>การเฝ้าระวังการใช้งานผิดปกติและมาตรการควบคุมความปลอดภัย</li>
-        <li>กระบวนการตอบสนองเหตุการณ์</li>
-      </ul>
-
-      <h2>13. การโอนธุรกิจ</h2>
-      <ul>
-        <li>เราจะแจ้งให้ทราบก่อนการโอนข้อมูลส่วนบุคคลที่มีนัยสำคัญ (โดยทั่วไปอย่างน้อย 30 วันเมื่อทำได้/ตามที่กฎหมายกำหนด)</li>
-        <li>ฝ่ายรับโอนต้องคุ้มครองข้อมูลด้วยมาตรฐานที่ไม่ต่ำกว่านโยบายนี้</li>
-        <li>ในกรณีที่กฎหมายอนุญาต คุณอาจขอให้ลบข้อมูลก่อนการโอนมีผล</li>
-      </ul>
-
-      <h2>14. การประมวลผลข้ามพรมแดน</h2>
-      <p>ข้อมูลอาจถูกประมวลผลนอกประเทศของคุณผ่านผู้ให้บริการระดับโลก โดยเราจะใช้มาตรการคุ้มครองตามที่กฎหมายกำหนด</p>
-
-      <h2>15. การปฏิบัติตามข้อกำหนดในเอเชียตะวันออกเฉียงใต้</h2>
-      <p>สำหรับผู้ใช้ในเอเชียตะวันออกเฉียงใต้ (รวมถึงสิงคโปร์ อินโดนีเซีย ไทย มาเลเซีย และเวียดนาม) เราประมวลผลข้อมูลตามข้อกำหนดด้านความเป็นส่วนตัวและการคุ้มครองข้อมูลที่เกี่ยวข้อง รวมถึงการจัดการสิทธิและภาระหน้าที่ด้านการโอนข้อมูลอย่างชอบด้วยกฎหมาย</p>
-
-      <h2>16. เทคโนโลยีติดตาม</h2>
-      <p>แอปและ SDK อาจใช้ตัวระบุและเทคโนโลยีที่คล้ายกัน (เช่น Android advertising identifiers และ telemetry ของ SDK) เพื่อโฆษณา วิเคราะห์ วินิจฉัย ความปลอดภัย และป้องกันการทุจริต</p>
-      <p>คุณสามารถจัดการการปรับแต่งโฆษณาและรีเซ็ต advertising identifier ในการตั้งค่า Google Ads</p>
-
-      <h2>17. การเปิดเผยแบบเด่นชัดและความยินยอมในแอป</h2>
-      <p>เมื่อ Google Play กำหนด เราจะมีการเปิดเผยแบบเด่นชัดในแอป และขอการกระทำยืนยันจากผู้ใช้ก่อนเก็บรวบรวม/ประมวลผลข้อมูลส่วนบุคคลและข้อมูลอ่อนไหวที่อยู่นอกเหนือความคาดหมายที่สมเหตุสมผลของผู้ใช้</p>
-
-      <h2>18. การเข้าถึงนโยบายและภาษา</h2>
-      <ul>
-        <li>นโยบายนี้เข้าถึงได้ในแอป (Settings -> Privacy Policy) และผ่าน URL HTTPS สาธารณะ</li>
-        <li>ไม่ต้องล็อกอินเพื่อดูเวอร์ชันเว็บของนโยบาย</li>
-        <li>หากมีความแตกต่างระหว่างหลายภาษา ให้ยึดฉบับภาษาอังกฤษ</li>
-      </ul>
-
-      <h2>19. การเปลี่ยนแปลงนโยบายนี้</h2>
-      <p>เราอาจอัปเดตนโยบายนี้เมื่อฟีเจอร์แอป ผู้ให้บริการ ข้อกำหนดทางกฎหมาย หรือแนวปฏิบัติการประมวลผลข้อมูลเปลี่ยนแปลง</p>
-      <p>สำหรับการเปลี่ยนแปลงที่มีสาระสำคัญ เราจะให้การแจ้งเตือนแบบเด่นชัดเมื่อจำเป็น</p>
-
-      <h2>20. ติดต่อ</h2>
-      <ul>
-        <li>อีเมล: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>ข้อเสนอแนะในแอป: Settings -> Send Feedback</li>
-      </ul>
-    </section>
-
-    <section class="lang-section" data-lang="vi" hidden>
-      <h2>1. Giới thiệu và phạm vi</h2>
-      <p>Chính sách quyền riêng tư này giải thích cách KopiAI ("Ứng dụng") thu thập, sử dụng, chia sẻ, lưu trữ và xóa dữ liệu.</p>
-      <p>Chính sách áp dụng cho ứng dụng Android KopiAI, backend API gateway của chúng tôi (Cloudflare Worker), và các SDK/nhà cung cấp bên thứ ba được tích hợp.</p>
-
-      <h2>2. Dữ liệu chúng tôi xử lý</h2>
-      <p>Chúng tôi áp dụng nguyên tắc tối thiểu hóa dữ liệu và chỉ xử lý dữ liệu cần thiết cho tính năng cốt lõi, bảo mật, chống lạm dụng, chẩn đoán, phân tích, quảng cáo và tuân thủ pháp luật.</p>
-
-      <h3>2.1 Dữ liệu bạn tạo trong ứng dụng</h3>
-      <ul>
-        <li>Lịch sử dịch</li>
-        <li>Từ vựng và bản ghi học tập</li>
-        <li>Lịch sử nội dung do AI tạo</li>
-        <li>Tùy chọn và cài đặt ứng dụng</li>
-      </ul>
-
-      <h3>2.2 Dữ liệu thiết bị và kỹ thuật</h3>
-      <ul>
-        <li>Mã định danh thiết bị giả danh do ứng dụng tạo (chỉ dùng cho quản lý hạn mức, chống lạm dụng và bảo mật; không liên kết với Google Advertising ID của bạn, không dùng cho theo dõi quảng cáo, hồ sơ người dùng hoặc mục đích ngoài chính sách này)</li>
-        <li>Siêu dữ liệu kỹ thuật của ứng dụng/thiết bị</li>
-        <li>Siêu dữ liệu mạng tại API edge (ví dụ địa chỉ IP)</li>
-        <li>Trạng thái bảo mật, giới hạn tần suất và chỉ số vận hành</li>
-      </ul>
-
-      <h3>2.3 Quyền nhạy cảm và phạm vi sử dụng</h3>
-      <p>Các quyền Android hiện được yêu cầu:</p>
-      <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
-      </ul>
-      <ul>
-        <li>Quyền camera/micro chỉ được yêu cầu khi bạn chủ động dùng tính năng liên quan (không yêu cầu khi mở ứng dụng).</li>
-        <li>Nếu bạn từ chối camera/micro, tính năng liên quan sẽ không hoạt động, nhưng tính năng văn bản cốt lõi vẫn dùng được.</li>
-        <li>Ứng dụng hiện không yêu cầu quyền vị trí runtime.</li>
-        <li>Chúng tôi không dùng quyền camera/âm thanh cho profiling hoặc quảng cáo không liên quan.</li>
-      </ul>
-
-      <h3>2.4 Thanh toán</h3>
-      <p>Google Play Billing xử lý dữ liệu thanh toán/giao dịch. Chúng tôi không lưu thông tin đầy đủ của thẻ thanh toán.</p>
-
-      <h3>2.5 Quảng cáo, phân tích, chẩn đoán</h3>
-      <ul>
-        <li>Phân phối quảng cáo/đo lường/chống gian lận (AdMob)</li>
-        <li>Phân tích sản phẩm (Firebase Analytics)</li>
-        <li>Chẩn đoán sự cố (Firebase Crashlytics)</li>
-      </ul>
-
-      <h2>3. Mục đích xử lý</h2>
-      <ul>
-        <li>Cung cấp tính năng dịch và học ngôn ngữ</li>
-        <li>Hỗ trợ tính năng AI trực tuyến qua định tuyến backend</li>
-        <li>Thực thi hạn mức và kiểm soát chống lạm dụng</li>
-        <li>Phân phối và đo lường quảng cáo</li>
-        <li>Cải thiện chất lượng và hiệu năng ứng dụng</li>
-        <li>Phát hiện sự cố, rủi ro bảo mật và gian lận</li>
-        <li>Tuân thủ nghĩa vụ pháp lý</li>
-      </ul>
-
-      <h2>4. Xử lý backend và thời gian lưu giữ</h2>
-      <p>Khi dùng tính năng mạng, yêu cầu được xử lý qua backend của chúng tôi (Cloudflare Worker).</p>
-      <h3>4.1 Nhóm dữ liệu backend</h3>
-      <ul>
-        <li>Payload API cần thiết để phục vụ tính năng được yêu cầu</li>
-        <li>Header ID thiết bị giả danh</li>
-        <li>Metadata mạng edge (ví dụ IP)</li>
-        <li>Trạng thái bảo mật, chống lạm dụng và giới hạn tần suất</li>
-      </ul>
-      <h3>4.2 Mục đích backend</h3>
-      <ul>
-        <li>Định tuyến yêu cầu tới nhà cung cấp mô hình đã cấu hình</li>
-        <li>Ngăn lạm dụng/gian lận/replay và áp dụng giới hạn</li>
-        <li>Bảo đảm tính toàn vẹn của luồng reward challenge/claim</li>
-        <li>Hỗ trợ vận hành, độ tin cậy và ứng phó sự cố</li>
-      </ul>
-      <h3>4.3 Lưu giữ điển hình</h3>
-      <ul>
-        <li>Chỉ số: tối đa khoảng 35 ngày</li>
-        <li>Trạng thái rủi ro/lạm dụng: TTL ngắn hạn (có thể cấu hình)</li>
-        <li>Trạng thái reward challenge: ngắn hạn (phút)</li>
-        <li>Dữ liệu cache tạm thời được xóa tự động sau khi giao dịch API hoàn tất, trừ khi cần lưu để phục vụ bảo mật hoặc chống lạm dụng.</li>
-      </ul>
-      <p>Nếu luật yêu cầu lưu giữ lâu hơn, quy định pháp luật sẽ được ưu tiên áp dụng.</p>
-
-      <h2>5. Yêu cầu xóa dữ liệu phía máy chủ</h2>
-      <p>Ngay cả khi không có tài khoản KopiAI độc lập, bạn vẫn có thể yêu cầu xóa dữ liệu phía máy chủ có thể liên kết.</p>
-      <p><strong>Cách gửi yêu cầu:</strong></p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Tiêu đề: "Server Data Deletion Request"</li>
-        <li>Vui lòng cung cấp thông tin đối chiếu (ví dụ ID thiết bị do ứng dụng tạo, khoảng thời gian ước lượng, quốc gia/khu vực, phiên bản ứng dụng)</li>
-      </ul>
-      <p><strong>Quy trình:</strong></p>
-      <ul>
-        <li>Chúng tôi xác nhận và kiểm tra yêu cầu.</li>
-        <li>Yêu cầu hợp lệ được xử lý trong vòng 30 ngày dương lịch (hoặc sớm hơn nếu luật địa phương yêu cầu).</li>
-        <li>Chúng tôi gửi xác nhận hoàn tất qua email.</li>
-        <li>Nếu một phần dữ liệu phải lưu vì lý do pháp lý/bảo mật/chống gian lận, việc xử lý sẽ bị giới hạn cho mục đích bắt buộc đó và có giải thích.</li>
-      </ul>
-
-      <h2>6. Dịch vụ bên thứ ba và chia sẻ dữ liệu</h2>
-      <p>Chúng tôi không bán dữ liệu cá nhân để lấy tiền. Theo chính sách Google Play, nhà phát triển vẫn chịu trách nhiệm đối với hành vi dữ liệu của SDK bên thứ ba trong ứng dụng.</p>
-      <ol>
-        <li>Google ML Kit (OCR/translation/speech) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob (ads/measurement/anti-fraud) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>Nhà cung cấp AI do backend cấu hình (ví dụ Google Gemini API, OpenAI API) -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>,
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>Dữ liệu đầu vào của người dùng chỉ được nhà cung cấp AI xử lý khi bạn chủ động khởi chạy tính năng AI trực tuyến, và chỉ để tạo nội dung theo yêu cầu của bạn.</p>
-      <p>Chúng tôi có thể tiết lộ dữ liệu khi có yêu cầu pháp luật, quy trình pháp lý, hoặc để bảo vệ quyền lợi/an toàn/bảo mật.</p>
-
-      <h2>7. Giới hạn quảng cáo theo danh mục nhạy cảm</h2>
-      <ul>
-        <li>Chúng tôi không cố ý sử dụng danh mục nhạy cảm (chủng tộc, tôn giáo, xu hướng tính dục, tình trạng sức khỏe, khó khăn tài chính...) cho quảng cáo cá nhân hóa.</li>
-        <li>Chúng tôi không cố ý dùng nội dung dịch cục bộ, bản ghi từ vựng hoặc nội dung AI tạo ra làm đầu vào trực tiếp cho nhắm mục tiêu quảng cáo cá nhân hóa.</li>
-        <li>Bạn có thể quản lý cá nhân hóa quảng cáo trong Google Ads/cài đặt thiết bị.</li>
-      </ul>
-
-      <h2>8. Tuyên bố về sale/share dữ liệu</h2>
-      <ul>
-        <li>Theo chính sách Google Play, "sale" thường là việc trao đổi/chuyển giao dữ liệu cá nhân và nhạy cảm để nhận lợi ích tiền tệ.</li>
-        <li>Nếu luật áp dụng định nghĩa sale/share rộng hơn (ví dụ lợi ích có giá trị khác), chúng tôi tuân thủ các yêu cầu pháp luật tương ứng.</li>
-      </ul>
-
-      <h2>9. Quyền người dùng và thời hạn phản hồi</h2>
-      <p>Tùy khu vực pháp lý, bạn có thể có quyền truy cập, chỉnh sửa, xóa, di chuyển dữ liệu, phản đối/hạn chế xử lý và khiếu nại.</p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Trong ứng dụng: Settings -> Send Feedback</li>
-      </ul>
-      <p>Chúng tôi phản hồi yêu cầu hợp lệ trong 30 ngày dương lịch, trừ khi có thời hạn pháp lý ngắn hơn.</p>
-
-      <h2>10. Không có tài khoản KopiAI độc lập</h2>
-      <p>Ứng dụng hiện không cung cấp đăng ký/đăng nhập tài khoản KopiAI độc lập. Quy trình xóa tài khoản trong ứng dụng không áp dụng; xóa dữ liệu phía máy chủ được xử lý theo Mục 5.</p>
-
-      <h2>11. Trẻ em</h2>
-      <p>Ứng dụng không hướng tới trẻ em. Chúng tôi không cố ý thu thập dữ liệu cá nhân của trẻ dưới 13 tuổi, hoặc dưới độ tuổi tối thiểu cao hơn nếu luật địa phương yêu cầu. Nếu phát hiện dữ liệu như vậy, chúng tôi sẽ thực hiện các bước để xóa dữ liệu.</p>
-
-      <h2>12. Bảo mật</h2>
-      <ul>
-        <li>HTTPS/TLS cho truyền dữ liệu qua mạng</li>
-        <li>Kiểm soát truy cập và vận hành theo nguyên tắc đặc quyền tối thiểu</li>
-        <li>Giám sát chống lạm dụng và biện pháp kiểm soát bảo mật</li>
-        <li>Quy trình ứng phó sự cố</li>
-      </ul>
-
-      <h2>13. Chuyển nhượng doanh nghiệp</h2>
-      <ul>
-        <li>Chúng tôi thông báo trước khi có chuyển giao quan trọng dữ liệu cá nhân (thường ít nhất 30 ngày khi khả thi/theo yêu cầu pháp luật).</li>
-        <li>Bên nhận phải bảo vệ dữ liệu với tiêu chuẩn không thấp hơn chính sách này.</li>
-        <li>Nếu pháp luật cho phép, bạn có thể yêu cầu xóa trước khi chuyển giao có hiệu lực.</li>
-      </ul>
-
-      <h2>14. Xử lý xuyên biên giới</h2>
-      <p>Dữ liệu có thể được xử lý ngoài quốc gia của bạn thông qua nhà cung cấp toàn cầu. Chúng tôi áp dụng các biện pháp bảo vệ theo luật áp dụng.</p>
-
-      <h2>15. Tuân thủ tại Đông Nam Á</h2>
-      <p>Đối với người dùng tại Đông Nam Á (bao gồm Singapore, Indonesia, Thái Lan, Malaysia và Việt Nam), chúng tôi xử lý dữ liệu theo các yêu cầu về quyền riêng tư/bảo vệ dữ liệu hiện hành, bao gồm xử lý quyền của người dùng và nghĩa vụ chuyển dữ liệu hợp pháp.</p>
-
-      <h2>16. Công nghệ theo dõi</h2>
-      <p>Ứng dụng và SDK có thể sử dụng định danh và công nghệ tương tự (ví dụ Android advertising identifiers và telemetry SDK) cho quảng cáo, phân tích, chẩn đoán, bảo mật và chống gian lận.</p>
-      <p>Bạn có thể quản lý cá nhân hóa quảng cáo và đặt lại advertising identifier trong cài đặt Google Ads.</p>
-
-      <h2>17. Công bố nổi bật và sự đồng ý trong ứng dụng</h2>
-      <p>Khi chính sách Google Play yêu cầu, chúng tôi cung cấp công bố nổi bật trong ứng dụng và yêu cầu hành động xác nhận của người dùng trước khi thu thập/xử lý dữ liệu cá nhân và dữ liệu nhạy cảm vượt ngoài kỳ vọng hợp lý của người dùng.</p>
-
-      <h2>18. Khả năng truy cập chính sách và ngôn ngữ</h2>
-      <ul>
-        <li>Chính sách này có sẵn trong ứng dụng (Settings -> Privacy Policy) và trên URL HTTPS công khai.</li>
-        <li>Không cần đăng nhập để xem bản web của chính sách.</li>
-        <li>Nếu có xung đột giữa các ngôn ngữ, bản tiếng Anh được ưu tiên.</li>
-      </ul>
-
-      <h2>19. Thay đổi chính sách này</h2>
-      <p>Chúng tôi có thể cập nhật chính sách khi tính năng ứng dụng, nhà cung cấp dịch vụ, yêu cầu pháp lý hoặc thực tiễn xử lý dữ liệu thay đổi.</p>
-      <p>Với thay đổi trọng yếu, chúng tôi cung cấp thông báo nổi bật khi cần thiết.</p>
-
-      <h2>20. Liên hệ</h2>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Phản hồi trong ứng dụng: Settings -> Send Feedback</li>
-      </ul>
-    </section>
-
-    <section class="lang-section" data-lang="ms" hidden>
-      <h2>1. Pengenalan dan Skop</h2>
-      <p>Dasar Privasi ini menerangkan bagaimana KopiAI ("Aplikasi") mengumpul, menggunakan, berkongsi, menyimpan dan memadam data.</p>
-      <p>Dasar ini terpakai kepada aplikasi Android KopiAI, backend API gateway kami (Cloudflare Worker), serta SDK/penyedia perkhidmatan pihak ketiga yang diintegrasikan.</p>
-
-      <h2>2. Data yang Kami Proses</h2>
-      <p>Kami mengamalkan prinsip peminimuman data dan hanya memproses data yang diperlukan untuk ciri teras, keselamatan, pencegahan penyalahgunaan, diagnostik, analitik, iklan dan pematuhan undang-undang.</p>
-
-      <h3>2.1 Data yang Anda Cipta dalam Aplikasi</h3>
-      <ul>
-        <li>Sejarah terjemahan</li>
-        <li>Kosa kata dan rekod pembelajaran</li>
-        <li>Sejarah kandungan dijana AI</li>
-        <li>Keutamaan dan tetapan aplikasi</li>
-      </ul>
-
-      <h3>2.2 Data Peranti dan Teknikal</h3>
-      <ul>
-        <li>Pengecam peranti pseudonim yang dijana aplikasi (digunakan secara eksklusif untuk pengurusan kuota, anti-penyalahgunaan dan perlindungan keselamatan; tidak dipautkan kepada Google Advertising ID anda, tidak digunakan untuk penjejakan iklan, pemprofilan pengguna, atau tujuan selain yang dinyatakan dalam dasar ini)</li>
-        <li>Metadata teknikal aplikasi/peranti</li>
-        <li>Metadata rangkaian di API edge (contohnya alamat IP)</li>
-        <li>Status keselamatan, had kadar dan metrik operasi</li>
-      </ul>
-
-      <h3>2.3 Kebenaran Sensitif dan Sempadan Penggunaan</h3>
-      <p>Kebenaran Android semasa yang diminta oleh aplikasi:</p>
-      <ul>
-        <li><code>CAMERA</code></li>
-        <li><code>RECORD_AUDIO</code></li>
-        <li><code>INTERNET</code></li>
-      </ul>
-      <ul>
-        <li>Kebenaran kamera/mikrofon diminta hanya apabila anda aktif menggunakan ciri berkaitan (bukan semasa aplikasi dibuka).</li>
-        <li>Jika anda menolak kebenaran kamera/mikrofon, ciri berkaitan tidak berfungsi, tetapi ciri teks teras lain kekal tersedia.</li>
-        <li>Aplikasi pada masa ini tidak meminta kebenaran lokasi runtime.</li>
-        <li>Kebenaran kamera/audio tidak digunakan untuk pemprofilan atau pengiklanan yang tidak berkaitan.</li>
-      </ul>
-
-      <h3>2.4 Pembelian</h3>
-      <p>Google Play Billing memproses data pembayaran/transaksi. Kami tidak menyimpan butiran penuh kad pembayaran.</p>
-
-      <h3>2.5 Iklan, Analitik dan Diagnostik</h3>
-      <ul>
-        <li>Penyiaran iklan/pengukuran/anti-penipuan (AdMob)</li>
-        <li>Analitik produk (Firebase Analytics)</li>
-        <li>Diagnostik kerosakan aplikasi (Firebase Crashlytics)</li>
-      </ul>
-
-      <h2>3. Tujuan Pemprosesan</h2>
-      <ul>
-        <li>Menyediakan ciri terjemahan dan pembelajaran bahasa</li>
-        <li>Menyokong ciri AI berasaskan rangkaian melalui routing backend</li>
-        <li>Menguatkuasakan had kuota dan kawalan anti-penyalahgunaan</li>
-        <li>Menyiar dan mengukur iklan</li>
-        <li>Meningkatkan kualiti serta prestasi aplikasi</li>
-        <li>Mengesan kerosakan, isu keselamatan, dan penipuan</li>
-        <li>Memenuhi kewajipan undang-undang</li>
-      </ul>
-
-      <h2>4. Pemprosesan Backend dan Pengekalan Data</h2>
-      <p>Apabila ciri rangkaian digunakan, permintaan diproses oleh backend kami (Cloudflare Worker).</p>
-      <h3>4.1 Kategori Data Backend</h3>
-      <ul>
-        <li>Payload API yang diperlukan untuk menyampaikan ciri yang diminta</li>
-        <li>Header ID peranti pseudonim</li>
-        <li>Metadata rangkaian edge (contohnya IP)</li>
-        <li>Status keselamatan, anti-penyalahgunaan dan had kadar</li>
-      </ul>
-      <h3>4.2 Tujuan Backend</h3>
-      <ul>
-        <li>Menghala permintaan ke penyedia model yang dikonfigurasi</li>
-        <li>Mencegah penyalahgunaan/penipuan/replay dan menguatkuasakan had</li>
-        <li>Menjaga integriti aliran reward challenge/claim</li>
-        <li>Menyokong operasi, kebolehpercayaan dan tindak balas insiden</li>
-      </ul>
-      <h3>4.3 Tempoh Pengekalan Lazim</h3>
-      <ul>
-        <li>Metrik: sehingga kira-kira 35 hari</li>
-        <li>Status risiko/anti-penyalahgunaan: TTL jangka pendek (boleh dikonfigurasi)</li>
-        <li>Status reward challenge: jangka sangat pendek (minit)</li>
-        <li>Data cache sementara dipadamkan secara automatik selepas transaksi API selesai, kecuali jika pengekalan diperlukan untuk tujuan keselamatan atau anti-penyalahgunaan.</li>
-      </ul>
-      <p>Jika undang-undang memerlukan tempoh pengekalan lebih lama, keperluan undang-undang akan diutamakan.</p>
-
-      <h2>5. Permintaan Pemadaman Data Sisi Pelayan</h2>
-      <p>Walaupun tanpa akaun KopiAI berasingan, anda boleh meminta pemadaman data sisi pelayan yang boleh dipautkan.</p>
-      <p><strong>Cara memohon:</strong></p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Subjek: "Server Data Deletion Request"</li>
-        <li>Sertakan maklumat padanan (contohnya ID peranti dijana aplikasi, julat masa anggaran, negara/wilayah, versi aplikasi)</li>
-      </ul>
-      <p><strong>Proses:</strong></p>
-      <ul>
-        <li>Kami mengakui dan mengesahkan permintaan.</li>
-        <li>Permintaan yang sah diproses dalam 30 hari kalendar (atau lebih cepat jika undang-undang tempatan memerlukan).</li>
-        <li>Kami menghantar pengesahan penyelesaian melalui email.</li>
-        <li>Jika data perlu dikekalkan atas sebab undang-undang/keselamatan/anti-penipuan, pemprosesan dihadkan kepada tujuan tersebut dan sebabnya akan diterangkan.</li>
-      </ul>
-
-      <h2>6. Perkhidmatan Pihak Ketiga dan Perkongsian Data</h2>
-      <p>Kami tidak menjual data peribadi untuk wang. Di bawah dasar Google Play, pembangun kekal bertanggungjawab terhadap tingkah laku data SDK pihak ketiga dalam aplikasi.</p>
-      <ol>
-        <li>Google ML Kit (OCR/translation/speech) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google AdMob (ads/measurement/anti-fraud) - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Google Play Billing / Google Play Services - <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-        <li>Firebase Analytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Firebase Crashlytics - <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
-        <li>Cloudflare - <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a></li>
-        <li>Penyedia AI yang dikonfigurasi backend (contohnya Google Gemini API, OpenAI API) -
-          <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>,
-          <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a>
-        </li>
-      </ol>
-      <p>Data input pengguna hanya diproses oleh penyedia AI apabila anda secara aktif memulakan ciri AI berasaskan rangkaian, dan hanya untuk menjana kandungan yang anda minta.</p>
-      <p>Kami mungkin mendedahkan data apabila dikehendaki undang-undang, proses undang-undang, atau untuk melindungi hak/keselamatan.</p>
-
-      <h2>7. Sekatan Iklan Kategori Sensitif</h2>
-      <ul>
-        <li>Kami tidak dengan sengaja menggunakan kategori sensitif (bangsa, agama, orientasi seksual, status kesihatan, kesulitan kewangan dan sebagainya) untuk iklan diperibadikan.</li>
-        <li>Kami tidak dengan sengaja menggunakan kandungan terjemahan tempatan, rekod kosa kata, atau kandungan AI dijana sebagai input langsung untuk sasaran iklan diperibadikan.</li>
-        <li>Anda boleh mengurus pemperibadian iklan dalam tetapan Google Ads/peranti.</li>
-      </ul>
-
-      <h2>8. Kenyataan Sale/Share</h2>
-      <ul>
-        <li>Di bawah dasar Google Play, "sale" lazimnya merujuk kepada pertukaran/pemindahan data peribadi dan sensitif untuk balasan kewangan.</li>
-        <li>Jika undang-undang terpakai mentakrifkan sale/share dengan skop lebih luas (contohnya balasan bernilai lain), kami mematuhi keperluan undang-undang yang berkenaan.</li>
-      </ul>
-
-      <h2>9. Hak Pengguna dan Tempoh Respons</h2>
-      <p>Bergantung pada bidang kuasa anda, anda mungkin mempunyai hak akses, pembetulan, pemadaman, kebolehportan, bantahan/sekat pemprosesan, dan aduan.</p>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Dalam aplikasi: Settings -> Send Feedback</li>
-      </ul>
-      <p>Kami memberi respons kepada permintaan sah dalam 30 hari kalendar melainkan undang-undang menetapkan tempoh lebih singkat.</p>
-
-      <h2>10. Tiada Akaun KopiAI Berasingan</h2>
-      <p>Aplikasi ini pada masa ini tidak menyediakan pendaftaran/log masuk akaun KopiAI berasingan. Aliran pemadaman akaun dalam aplikasi tidak terpakai; pemadaman data sisi pelayan dirujuk kepada Seksyen 5.</p>
-
-      <h2>11. Kanak-Kanak</h2>
-      <p>Aplikasi ini tidak disasarkan kepada kanak-kanak. Kami tidak secara sedar mengumpul data peribadi daripada kanak-kanak di bawah umur 13 tahun, atau di bawah umur minimum yang lebih tinggi jika dikehendaki undang-undang tempatan. Jika data tersebut dikenal pasti, kami akan mengambil langkah untuk memadamkannya.</p>
-
-      <h2>12. Keselamatan</h2>
-      <ul>
-        <li>HTTPS/TLS untuk penghantaran rangkaian</li>
-        <li>Kawalan akses dan operasi keistimewaan minimum</li>
-        <li>Pemantauan anti-penyalahgunaan dan kawalan keselamatan</li>
-        <li>Prosedur tindak balas insiden</li>
-      </ul>
-
-      <h2>13. Pemindahan Perniagaan</h2>
-      <ul>
-        <li>Kami memberi notis sebelum pemindahan material data peribadi (kebiasaannya sekurang-kurangnya 30 hari apabila boleh/diperlukan).</li>
-        <li>Pihak penerima mesti melindungi data dengan standard yang tidak kurang daripada dasar ini.</li>
-        <li>Apabila dibenarkan secara undang-undang, anda boleh meminta pemadaman sebelum pemindahan berkuat kuasa.</li>
-      </ul>
-
-      <h2>14. Pemprosesan Rentas Sempadan</h2>
-      <p>Data mungkin diproses di luar negara anda melalui penyedia global. Kami melaksanakan langkah perlindungan yang dikehendaki oleh undang-undang terpakai.</p>
-
-      <h2>15. Pematuhan Asia Tenggara</h2>
-      <p>Bagi pengguna di Asia Tenggara (termasuk Singapura, Indonesia, Thailand, Malaysia, dan Vietnam), kami memproses data mengikut keperluan privasi/perlindungan data tempatan yang terpakai, termasuk pengendalian hak dan kewajipan pemindahan yang sah.</p>
-
-      <h2>16. Teknologi Penjejakan</h2>
-      <p>Aplikasi dan SDK mungkin menggunakan pengecam serta teknologi serupa (contohnya Android advertising identifiers dan telemetry SDK) untuk iklan, analitik, diagnostik, keselamatan, dan anti-penipuan.</p>
-      <p>Anda boleh mengurus pemperibadian iklan dan menetapkan semula advertising identifier dalam tetapan Google Ads.</p>
-
-      <h2>17. Pendedahan Menonjol dan Persetujuan Dalam Aplikasi</h2>
-      <p>Jika diwajibkan oleh dasar Google Play, kami menyediakan pendedahan menonjol dalam aplikasi dan memperoleh tindakan afirmatif pengguna sebelum mengumpul/memproses data peribadi dan sensitif di luar jangkaan munasabah pengguna.</p>
-
-      <h2>18. Kebolehcapaian Dasar dan Bahasa</h2>
-      <ul>
-        <li>Dasar ini tersedia dalam aplikasi (Settings -> Privacy Policy) dan pada URL HTTPS awam.</li>
-        <li>Tiada log masuk diperlukan untuk melihat versi web dasar.</li>
-        <li>Jika terdapat percanggahan antara versi bahasa, versi Bahasa Inggeris terpakai.</li>
-      </ul>
-
-      <h2>19. Perubahan kepada Dasar Ini</h2>
-      <p>Kami boleh mengemas kini dasar ini apabila ciri aplikasi, penyedia perkhidmatan, keperluan undang-undang, atau amalan pemprosesan data berubah.</p>
-      <p>Untuk perubahan material, kami menyediakan notis menonjol apabila diperlukan.</p>
-
-      <h2>20. Hubungi</h2>
-      <ul>
-        <li>Email: <strong>cdlcdl9527@gmail.com</strong></li>
-        <li>Maklum balas dalam aplikasi: Settings -> Send Feedback</li>
-      </ul>
-    </section>
-
-    <hr />
-    <p class="small">Last Updated: March 21, 2026 | Effective Date: March 21, 2026</p>
+    <p class="small">The English version is the authoritative version. No login is required to view this page.</p>
   </main>
-
-  <script>
-    (function () {
-      const select = document.getElementById("langSelect");
-      const sections = document.querySelectorAll(".lang-section");
-
-      function setLang(lang) {
-        if (lang === "tl") {
-          window.location.href = "privacy-tl.html";
-          return;
-        }
-        sections.forEach((el) => {
-          const matched = el.getAttribute("data-lang") === lang;
-          if (matched) {
-            el.removeAttribute("hidden");
-          } else {
-            el.setAttribute("hidden", "hidden");
-          }
-        });
-        select.value = lang;
-        try {
-          localStorage.setItem("kopiai_policy_lang", lang);
-        } catch (e) {}
-      }
-
-      const saved = (() => {
-        try {
-          return localStorage.getItem("kopiai_policy_lang");
-        } catch (e) {
-          return null;
-        }
-      })();
-
-      const supported = new Set(["en", "zh", "id", "th", "vi", "ms", "tl"]);
-      const langMap = [
-        ["fil", "tl"],
-        ["tl", "tl"],
-        ["zh", "zh"],
-        ["id", "id"],
-        ["th", "th"],
-        ["vi", "vi"],
-        ["ms", "ms"],
-        ["en", "en"]
-      ];
-      const browserLang = (navigator.language || "").toLowerCase();
-      const matchedBrowser = langMap.find(([prefix]) => browserLang.startsWith(prefix));
-      const browserDefault = matchedBrowser ? matchedBrowser[1] : "en";
-      const initial = supported.has(saved) ? saved : browserDefault;
-      setLang(initial);
-
-      select.addEventListener("change", function () {
-        setLang(this.value);
-      });
-    })();
-  </script>
 </body>
 </html>
