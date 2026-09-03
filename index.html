@@ -20,7 +20,7 @@
       color: var(--text);
       font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; overflow-wrap: anywhere; }
     h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.2; }
     h2 { margin: 28px 0 8px; font-size: 24px; line-height: 1.3; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
     h3 { margin: 18px 0 6px; font-size: 19px; line-height: 1.35; }
@@ -40,8 +40,8 @@
   <main class="wrap">
     <h1>KopiAI Privacy Policy</h1>
     <div class="meta">
-      <div><strong>Last Updated:</strong> June 24, 2026</div>
-      <div><strong>Effective Date:</strong> June 24, 2026</div>
+      <div><strong>Last Updated:</strong> August 31, 2026</div>
+      <div><strong>Effective Date:</strong> August 31, 2026</div>
       <div><strong>Contact:</strong> cdlcdl9527@gmail.com</div>
     </div>
     <div class="doc-nav" aria-label="Document Links">
@@ -50,8 +50,8 @@
     </div>
     <div class="note">This web page mirrors the in-app privacy policy used by the current KopiAI Android release.</div>
     <section>
-      <p>Last Updated: June 24, 2026</p>
-      <p>Effective Date: June 24, 2026</p>
+      <p>Last Updated: August 31, 2026</p>
+      <p>Effective Date: August 31, 2026</p>
       <p>Applicable App: KopiAI</p>
       <p>Applicable App Versions: All versions</p>
       <p>Data Controller: KopiAI Developer</p>
@@ -73,10 +73,14 @@
         <li>Vocabulary and learning records</li>
         <li>Generated content history</li>
         <li>App preferences and settings</li>
+        <li>Short-lived recovery copies of prepared generation requests, translation text state, generated results, image-translation photos/crops, and OCR text when Android ends the App process</li>
       </ul>
-      <h3>2.2 Device and Technical Data</h3>
+      <p>Recovery copies stay in app-private, non-backed-up storage. Recoverable generation is available for 10 minutes, and temporary recovery records are removed after 24 hours, on normal completion/abandonment where applicable, when you clear local data, or when you uninstall the App. Interrupted tasks are not automatically resubmitted.</p>
+      <h3>2.2 Account, Device, and Technical Data</h3>
       <ul>
-        <li>Android device identifier (SSAID) — a device-level pseudonymous identifier provided by the Android system, used for quota, anti-abuse, subscription binding, and security</li>
+        <li>Android device identifier (SSAID), used as a device-level pseudonymous identifier for quota, rewards, subscription binding, anti-abuse, and security</li>
+        <li>Pseudonymous KopiAI account ID and device/session credentials used to keep translation quota, rewards, and verified subscription state consistent across devices</li>
+        <li>Recovery code stored in encrypted app-private storage on your device; the backend stores a keyed verifier rather than the raw recovery secret</li>
         <li>App/device technical metadata (for compatibility and diagnostics)</li>
         <li>Network metadata at API edge (for example IP address)</li>
         <li>Security/rate-limit counters and operational metrics</li>
@@ -96,6 +100,7 @@
       <ul>
         <li>Camera/microphone permissions are requested only when you actively use related features (not at app launch).</li>
         <li>If you deny camera/microphone permission, related feature(s) will not work, but other core text-based features remain available.</li>
+        <li>Voice input may be processed by the speech-recognition service configured on your device. KopiAI does not store raw voice audio.</li>
         <li>The App does not currently request location runtime permission.</li>
         <li>We do not use camera/audio permission for unrelated profiling or advertising.</li>
         <li>Network state is used to check connectivity for online features.</li>
@@ -128,7 +133,9 @@
       <h3>4.1 Backend Data Categories</h3>
       <ul>
         <li>API request payloads required to serve requested features</li>
-        <li>Pseudonymous device ID headers</li>
+        <li>Pseudonymous device, account, and session identifiers</li>
+        <li>Account-device links and keyed recovery verifiers</li>
+        <li>Quota, reward, offline-ticket, subscription, purchase-binding, and short-lived recovery/replay state</li>
         <li>Edge network metadata (for example IP)</li>
         <li>Security, anti-abuse, and rate-limit state</li>
       </ul>
@@ -145,66 +152,74 @@
         <li>Metrics: up to about 35 days</li>
         <li>Risk/abuse state: short-term TTL (configurable)</li>
         <li>Reward challenge state: short-lived (minutes)</li>
+        <li>Generation replay results: about 15 minutes</li>
+        <li>Account-operation retry state, offline translation tickets, and normal sessions: up to about 24 hours</li>
       </ul>
+      <p>Account, quota, reward, verified subscription, and purchase-binding state may be kept while needed to provide the account-backed features, prevent abuse, or meet legal obligations, and is covered by the deletion process in Section 5.</p>
       <p>Retention may be adjusted for security/operations. If law requires longer retention, legal requirements prevail.</p>
-      <h2>5. Server-Side Data Deletion Requests (Google Play and Legal Compliance)</h2>
-      <p>Even though the App does not provide standalone KopiAI account registration, you may request deletion of server-side data associated with your app usage (for example pseudonymous device ID records, backend risk/metrics records where linkable).</p>
-      <p>How to request deletion:</p>
+      <h2>5. In-App and Server-Side Data Deletion</h2>
+      <p>The in-app &quot;Delete account&quot; control submits an authenticated server deletion request before erasing data from your device.</p>
+      <p>When the server confirms completion, the App deletes:</p>
       <ul>
-        <li>Use the in-app local data deletion option to delete data stored on your device.</li>
-        <li>For linkable server-side data, email: cdlcdl9527@gmail.com</li>
+        <li>Linkable backend user state, including quota, reward, premium/subscription state, purchase bindings, pseudonymous session identity mappings, and short-lived generation recovery/replay results</li>
+        <li>Local history, vocabulary, learning data, preferences, cached or recovery files, and local session/installation identifiers</li>
+      </ul>
+      <p>If the server cannot confirm completion, local data remains on the device so you can retry. This prevents the App from destroying the credentials needed to finish the server request.</p>
+      <p>Deletion does not reset security or fraud-prevention protections. Security, risk, rate-limit, and abuse-prevention records may be retained for as long as reasonably necessary. A short-lived retry record may be retained for up to 24 hours so a repeated request can remove data recreated after a lost response. A deletion audit record may be retained for up to 90 days. Longer retention applies where required by law.</p>
+      <p>For privacy rights requests or linkable records that cannot be handled automatically:</p>
+      <ul>
+        <li>Email: cdlcdl9527@gmail.com</li>
         <li>Subject: &quot;Server Data Deletion Request&quot;</li>
         <li>Include enough information for matching records (for example app-generated device ID, approximate request time window, country/region, app version).</li>
       </ul>
-      <p>Our process:</p>
-      <ul>
-        <li>We acknowledge receipt and begin verification.</li>
-        <li>We process valid requests within 30 calendar days (or faster if required by local law).</li>
-        <li>After completion, we send confirmation by email.</li>
-        <li>If some data must be retained by law/security/fraud-prevention obligations, we restrict processing to those mandatory purposes only and explain the reason.</li>
-      </ul>
+      <p>We process valid email requests within 30 calendar days (or faster if required by local law) and confirm completion by email. If some data must be retained by law, security, or fraud-prevention obligations, we restrict processing to those purposes and explain the reason where required.</p>
       <h2>6. Third-Party Services, SDKs, and Sharing</h2>
       <p>We do not sell personal data for money.</p>
       <p>Under Google Play policy, developers remain responsible for third-party SDK behavior inside the app. We perform due diligence and require integrated third parties to comply with applicable policies.</p>
       <p>Third-party services used:</p>
-      <h2>1. Google ML Kit</h2>
+      <h3>1. Google ML Kit</h3>
       <ul>
         <li>Purpose: on-device text recognition, language identification, and translation</li>
         <li>Camera images and OCR frames are processed on-device by the App/ML Kit and are not uploaded by us to OCR providers.</li>
         <li>Policy: https://policies.google.com/privacy</li>
       </ul>
-      <h2>2. Google AdMob</h2>
+      <h3>2. Google AdMob</h3>
       <ul>
         <li>Purpose: ad serving, ad measurement, anti-fraud</li>
         <li>Policy: https://policies.google.com/privacy</li>
       </ul>
-      <h2>3. Google Play Billing / Google Play Services</h2>
+      <h3>3. Google Play Billing / Google Play Services</h3>
       <ul>
         <li>Purpose: purchase/subscription validation and Play-related services</li>
         <li>Policy: https://policies.google.com/privacy</li>
       </ul>
-      <h2>4. Firebase Analytics</h2>
+      <h3>4. Firebase Analytics</h3>
       <ul>
         <li>Purpose: usage analytics</li>
         <li>Policy: https://firebase.google.com/support/privacy</li>
       </ul>
-      <h2>5. Firebase Crashlytics</h2>
+      <h3>5. Firebase Crashlytics</h3>
       <ul>
         <li>Purpose: crash diagnostics</li>
         <li>Policy: https://firebase.google.com/support/privacy</li>
       </ul>
-      <h2>6. Cloudflare</h2>
+      <h3>6. Cloudflare</h3>
       <ul>
         <li>Purpose: API gateway, edge security, and traffic handling</li>
         <li>Policy: https://www.cloudflare.com/privacypolicy/</li>
       </ul>
-      <h2>7. AI model providers configured by backend</h2>
+      <h3>7. AI model providers configured by backend</h3>
       <ul>
         <li>Example providers: Google Gemini API, OpenAI API</li>
         <li>Purpose: generate responses for user-requested AI features</li>
         <li>Policies:</li>
         <li>Google: https://policies.google.com/privacy</li>
         <li>OpenAI: https://openai.com/policies/privacy-policy</li>
+      </ul>
+      <h3>8. Device speech-recognition service</h3>
+      <ul>
+        <li>Purpose: convert voice input to text when you actively use voice input</li>
+        <li>The provider depends on the speech-recognition service configured on your device. Its own privacy policy applies.</li>
       </ul>
       <p>We may disclose data when required by law, legal process, or to protect rights/safety/security.</p>
       <h2>7. Advertising and Sensitive Category Restrictions</h2>
@@ -230,9 +245,9 @@
       <ul>
         <li>We respond to valid requests within 30 calendar days, unless a shorter legal deadline applies.</li>
       </ul>
-      <h2>10. No Standalone KopiAI Account</h2>
-      <p>The App currently does not provide standalone KopiAI account registration/login.</p>
-      <p>Therefore, app-account deletion workflows for in-app accounts do not apply. However, Section 5 explains how to request deletion of linkable server-side data.</p>
+      <h2>10. Pseudonymous App Account and Recovery</h2>
+      <p>KopiAI may create a pseudonymous app account when you first use an account-backed translation feature or restore a purchase. The account does not require an email address, username, or password. It links translation quota, rewards, device access, and verified subscription state across devices.</p>
+      <p>Your recovery code is the credential used to recover this account after reinstalling or changing devices. Keep it secure. The App stores it in encrypted app-private storage on your device, and the backend stores a keyed verifier rather than the raw recovery secret. Section 5 explains the in-app account deletion process and additional privacy request options.</p>
       <h2>11. Children and Age Thresholds</h2>
       <p>The App is not directed to children.</p>
       <p>We do not knowingly collect personal data from children under 13, or under a higher minimum age where required by local law. If such data is identified, we will take steps to delete it.</p>

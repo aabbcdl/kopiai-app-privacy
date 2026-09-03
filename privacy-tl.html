@@ -7,34 +7,36 @@
 </head>
 <body>
 <h1>Patakaran sa Privacy para sa KopiAI</h1>
-<p><strong>Huling Na-update:</strong>Pebrero 25, 2026</p>
+<p><strong>Huling Na-update:</strong>Agosto 31, 2026</p>
 <p>Ang KopiAI ("kami", "kami", "aming") ay nagpapatakbo ng KopiAI na mobile application. Ipinapaliwanag ng patakarang ito kung paano namin kinokolekta, ginagamit, at pinoprotektahan ang iyong data.</p>
 <h2>1. Impormasyong Kinokolekta Namin</h2>
 <ul>
-<li>Text ng input ng user para sa pagsasalin o henerasyon (lokal na pinoproseso at/o sa pamamagitan ng Google ML Kit o Gemini API).</li>
+<li>Text para sa karaniwang translation ay pinoproseso sa device. Ang text para sa AI generation o AI-assisted translation ay dumadaan sa Cloudflare backend papunta sa kasalukuyang naka-configure na AI provider.</li>
 <li>Voice input para sa mga feature ng speech (naproseso para sa pagkilala; hindi namin iniimbak ang raw audio).</li>
-<li>Mga larawan para sa pagsasalin ng larawan (naproseso upang kunin ang teksto; hindi namin iniimbak).</li>
-<li>Lokal na data gaya ng naka-save na bokabularyo at pag-unlad ng pag-aaral na nakaimbak sa iyong device.</li>
+<li>Mga larawan para sa image translation ay pinoproseso sa device. Maaaring gumawa ang App ng pansamantalang app-private recovery copy hanggang 24 oras kung ihihinto ng Android ang proseso.</li>
+<li>Lokal na data gaya ng history, bokabularyo, learning records, at maikling recovery state na nakaimbak sa device.</li>
+<li>Pseudonymous account, device/session identifiers, quota, rewards, at na-verify na subscription state na kailangan para sa account-backed features.</li>
 </ul>
 <h2>2. Paano Namin Gumamit ng Impormasyon</h2>
 <ul>
 <li>Magbigay ng pagsasalin, pagbuo ng teksto, at mga tampok sa pag-aaral.</li>
 <li>Pahusayin ang pagiging maaasahan at pagganap ng app.</li>
-<li>Hindi kami gumagamit ng analytics o mga ad SDK.</li>
+<li>Gumagamit ang App ng Firebase Analytics, Firebase Crashlytics, at Google AdMob para sa analytics, diagnostics, ads, measurement, at anti-fraud.</li>
 </ul>
 <h2>3. Pagbabahaginan</h2>
-<p>Hindi namin ibinebenta ang iyong data. Maaari kaming magbahagi ng data sa mga third-party na tagapagbigay ng AI para lang maghatid ng mga pangunahing feature. Ang mga provider na ito ay may sariling mga patakaran sa privacy.</p>
+<p>Hindi namin ibinebenta ang iyong data. Maaaring iproseso ng Google services, Cloudflare, at naka-configure na AI providers ang data na kailangan para sa feature na hiniling mo, analytics, diagnostics, billing, ads, seguridad, at anti-fraud. May sariling patakaran sa privacy ang mga provider na ito.</p>
 <h2>4. Pagpapanatili ng Data</h2>
 <ul>
 <li>Mananatili ang lokal na data sa iyong device hanggang sa tanggalin mo ito o i-uninstall ang app.</li>
-<li>Hindi namin iniimbak ang iyong mga input sa aming mga server.</li>
+<li>Hindi pinapanatili ng aming backend ang text ng AI request pagkatapos ng sagot. Maaaring may sariling retention policy ang AI provider.</li>
+<li>Nag-iimbak ang backend ng pseudonymous account/device mapping, quota, rewards, subscription, purchase binding, at maikling recovery/replay state habang kailangan para sa serbisyo at seguridad.</li>
 <li>Ang data ng app ay hindi naka-back up sa aming mga server. Naka-disable ang Android system backup para sa app na ito.</li>
 </ul>
 <h2>5. Seguridad ng Data</h2>
 <p>Gumagawa kami ng mga makatwirang hakbang upang maprotektahan ang data. Kapag ipinadala ang data sa mga third-party na provider, ipinapadala ito gamit ang mga secure na koneksyon gaya ng ibinigay ng kanilang mga SDK. Walang sistema na 100% secure.</p>
 <h2>6. Iyong Mga Pagpipilian</h2>
 <ul>
-<li>Maaari mong i-clear ang lokal na data sa app.</li>
+<li>Maaari mong gamitin ang in-app na &quot;Delete account&quot; para burahin muna ang kaugnay na server state at saka ang lokal na data. Kung hindi makumpirma ng server, mananatili muna ang lokal na credentials para makapag-retry ka.</li>
 <li>Maaari mong bawiin ang mga pahintulot sa mga setting ng system.</li>
 <li>Maaari mong ihinto ang paggamit ng app anumang oras.</li>
 </ul>
